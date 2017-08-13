@@ -1,0 +1,96 @@
+/*********************************************
+*********** custom-select
+**********************************************/
+
+.custom-select {
+  position: relative;
+
+  .current-value {
+    width: 200px;
+    height: 42px;
+    padding: 0 40px 0 15px;
+    line-height: 42px;
+    background: #eceeeb;
+    border-radius: 8px;
+    position: relative;
+    transition: .4s;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 9px;
+      height: 9px;
+      border-right: 3px solid $color-orange;
+      border-bottom: 3px solid $color-orange;
+      transform: rotate(45deg);
+      position: absolute;
+      bottom: 17px;
+      right: 12px;
+      margin: auto;
+      transform-origin: center;
+    }
+
+    &:hover {
+      color: $color-orange;
+    }
+
+  }
+
+  ul {
+    display: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 5px);
+    background: #eceeeb;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 5px 10px;
+  }
+
+  li {
+    display: block;
+    padding: 10px 15px;
+    border-bottom: 1px solid $color-orange;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-orange;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+  }
+
+  label {
+    display: none;
+  }
+
+  &.active {
+
+    ul {
+      display: block;
+    }
+
+    .current-value:before {
+      border-right: none;
+      border-bottom: none;
+      border-left: 3px solid $color-orange;
+      border-top: 3px solid $color-orange;
+      bottom: 13px;
+    }
+
+  }
+
+}
+
+@media(max-width: 980px) {
+
+  .custom-select .current-value {
+    width: 150px;
+  }
+
+}
