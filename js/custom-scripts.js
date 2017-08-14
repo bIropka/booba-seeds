@@ -35,11 +35,28 @@ $(window).ready(function() {
 
     });
 
-    $('.burger').click(function() {
+    $('.header-burger').click(function() {
 
         $(this).toggleClass('active');
         $(this).siblings('nav').toggleClass('active');
 
+    });
+
+    $('.slider-banner').slick({
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 641,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
+    });
+
+    $('.catalog-burger').click(function() {
+
+        $(this).parents('.catalog').toggleClass('active');
     });
 
 });

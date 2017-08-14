@@ -43,12 +43,42 @@ fieldset {
   border: none;
 }
 
+label {
+  position: relative;
+}
+
 input[type='text'],
 input[type='password'],
 input[type='search'],
 input[type='email'],
 input[type='tel'] {
   padding: 0 15px;
+}
+
+.form-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  margin: auto;
+  z-index: 1;
+  cursor: pointer;
+
+  & + input {
+    padding: 0 40px 0 15px;
+  }
+
 }
 
 a:hover,
@@ -62,7 +92,6 @@ input:active,
 input:focus {
   outline: none;
 }
-
 
 input::-webkit-input-placeholder {
   color: #000;
@@ -120,6 +149,7 @@ input:focus:-ms-input-placeholder {
 
 main {
   flex-grow: 1;
+  background: #fff;
 }
 
 nav a {
@@ -138,7 +168,7 @@ nav a {
 
 }
 
-.burger {
+.header-burger {
   display: none;
 }
 
@@ -169,7 +199,7 @@ nav a {
 
 @media(max-width: 768px) {
 
-  .burger {
+  .header-burger {
     display: block;
     width: 40px;
     height: 39px;

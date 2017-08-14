@@ -6,6 +6,7 @@
 
 @import "../libs/jquery-ui-1.12.1.custom/jquery-ui.min";
 @import "../libs/slick-1.6.0/slick";
+@import "../libs/booba-font/style";
 
 @import "tools/variables";
 @import "tools/mixins";
@@ -20,3 +21,7 @@
 
 @import "components/header";
 @import "components/footer";
+
+@import "components/catalog";
+@import "components/promo";
+@import "components/slider-banner";

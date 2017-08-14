@@ -1,0 +1,196 @@
+/*********************************************
+*********** catalog
+**********************************************/
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  background: url(../images/background-catalog.jpg) center;
+  padding: 10px 20px;
+}
+
+.catalog-burger {
+  display: none;
+}
+
+.catalog-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 20%;
+  padding: 20px;
+  text-decoration: none;
+  color: #fff;
+
+  i {
+    color: inherit;
+    margin: 0 15px 0 0;
+    transition: .4s;
+    position: relative;
+  }
+
+  .catalog-item-name {
+    font-weight: 500;
+    color: #b5fea1;
+    text-decoration: underline;
+    transition: .4s;
+  }
+
+  .catalog-item-amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: $color-orange;
+    position: absolute;
+    top: -3px;
+    left: -5px;
+    font-weight: 700;
+    font-size: 10px;
+    color: #fff;
+  }
+
+  &:hover {
+
+    i {
+      color: $color-orange;
+      margin: 0 10px;
+    }
+
+    .catalog-item-name {
+      color: $color-orange;
+      text-decoration: none;
+    }
+
+  }
+
+}
+
+@media(max-width: 1230px) {
+
+  .catalog {
+    padding: 10px;
+  }
+
+  .catalog-item {
+    padding: 15px 10px;
+
+    i {
+      margin: 0 10px 0 0;
+      font-size: 40px;
+    }
+
+    .catalog-item-name {
+      font-size: 13px;
+    }
+
+  }
+
+}
+
+@media(max-width: 980px) {
+
+  .catalog {
+    padding: 10px 5px;
+  }
+
+  .catalog-item {
+    padding: 15px 5px;
+
+    i {
+      margin: 0 5px 0 0;
+      font-size: 32px;
+    }
+
+    .catalog-item-name {
+      font-size: 10px;
+    }
+
+  }
+
+}
+
+@media(max-width: 768px) {
+
+  .catalog-burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+
+    .burger-icon {
+      display: block;
+      width: 26px;
+      height: 23px;
+      margin: 0 15px 0 0;
+    }
+
+  }
+
+  .catalog-burger-hidden,
+  .catalog-burger-visible {
+    font-weight: 500;
+    color: #b5fea1;
+    text-decoration: underline;
+    transition: .4s;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+  }
+
+  .catalog-burger-visible {
+    display: none;
+  }
+
+  .catalog {
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  .catalog-item {
+    display: none;
+    padding: 20px;
+    width: 100%;
+    max-width: 250px;
+
+    i {
+      font-size: 49px;
+      margin: 0 15px 0 0;
+    }
+
+    .catalog-item-name {
+      font-size: 15px;
+    }
+
+  }
+
+  .catalog.active .catalog-burger-visible {
+    display: block;
+  }
+
+  .catalog.active .catalog-burger-hidden {
+    display: none;
+  }
+
+  .catalog.active .burger-icon {
+    transform: scale(.8);
+  }
+
+  .catalog.active .catalog-item {
+    display: flex;
+  }
+
+  .catalog.active {
+    padding: 0 20px 30px;
+  }
+
+}

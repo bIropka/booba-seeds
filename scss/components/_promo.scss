@@ -1,0 +1,42 @@
+/*********************************************
+*********** promo
+**********************************************/
+
+.promo {
+  padding: 30px 25px 10px;
+
+  h1 {
+    font-weight: 500;
+    color: $color-green-dark;
+    font-size: 18px;
+  }
+
+  p {
+    font-weight: 300;
+    line-height: 26px;
+    margin: 10px 0;
+  }
+
+  a {
+    color: $color-orange;
+    line-height: 26px;
+    font-weight: 500;
+    text-decoration: none;
+
+    span {
+      transition: .4s;
+      margin: 0 0 0 2px;
+    }
+
+    &:hover {
+      color: #d85212;
+
+      span {
+        margin: 0 0 0 7px;
+      }
+
+    }
+
+  }
+
+}
