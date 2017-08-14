@@ -17,16 +17,15 @@
     cursor: pointer;
 
     &:before {
-      content: '';
+      content: '\f078';
+      font-family: FontAwesome;
       display: block;
-      width: 9px;
-      height: 9px;
-      border-right: 3px solid $color-orange;
-      border-bottom: 3px solid $color-orange;
-      transform: rotate(45deg);
+      color: $color-orange;
+      font-size: 18px;
+      line-height: 42px;
       position: absolute;
-      bottom: 17px;
-      right: 12px;
+      top: 0;
+      right: 10px;
       margin: auto;
       transform-origin: center;
     }
@@ -76,11 +75,7 @@
     }
 
     .current-value:before {
-      border-right: none;
-      border-bottom: none;
-      border-left: 3px solid $color-orange;
-      border-top: 3px solid $color-orange;
-      bottom: 13px;
+      content: '\f077';
     }
 
   }
