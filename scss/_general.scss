@@ -145,6 +145,7 @@ input:focus:-ms-input-placeholder {
   max-width: 1230px;
   min-width: 320px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 main {
@@ -163,13 +164,76 @@ nav a {
   text-decoration: none;
 
   &[href]:hover {
-    text-decoration: underline;
+    color: $color-green-light;
   }
 
 }
 
 .header-burger {
   display: none;
+}
+
+.content-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+aside {
+  display: block;
+  width: 20%;
+  background: #ececec;
+  padding: 2.5% 2%;
+}
+
+.aside-title {
+  display: block;
+  text-align: right;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #c6cacc;
+  box-shadow: 0 1px 0 0 #fff;
+  color: $color-green-dark;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1;
+  position: relative;
+  margin: 0 0 20px 0;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 29px;
+    height: 31px;
+    background: url(../images/icon-aside-title.png) no-repeat center;
+    position: absolute;
+    bottom: -2px;
+    left: -10px;
+  }
+
+}
+
+.show-more {
+  color: $color-orange-light;
+  font-weight: 500;
+  transition: .4s;
+  text-decoration: none;
+
+  span {
+    display: inline-block;
+    margin: 0 0 0 2px;
+    transition: .4s;
+  }
+
+  &:hover {
+    color: $color-green-light;
+
+    span {
+      margin: 0 0 0 7px;
+    }
+
+  }
+
 }
 
 @media(max-width: 1230px) {
@@ -283,6 +347,16 @@ nav a {
       left: 0;
     }
 
+  }
+
+  .content-columns {
+    flex-wrap: wrap;
+  }
+
+  aside {
+    width: 100%;
+    order: 2;
+    padding: 30px;
   }
 
 }

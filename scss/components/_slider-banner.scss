@@ -34,8 +34,13 @@
       transition: .4s;
     }
 
-    &:hover:after {
-      color: $color-green-dark;
+    &:hover {
+      background: url(../images/icon-background-green.png) no-repeat center;
+
+      &:after {
+        color: #fff;
+      }
+
     }
 
     &:active {
@@ -163,7 +168,7 @@
 
 .slide-banner-button {
   display: inline-block;
-  background: radial-gradient(circle closest-corner at 10px center, $color-green-light, $color-green-medium);
+  background: #000 radial-gradient(circle closest-corner at 10px center, $color-green-light, $color-green-medium);
   border-radius: 8px;
   padding: 14px 25px;
   text-decoration: none;
@@ -172,7 +177,7 @@
   font-weight: 500;
 
   &:hover {
-    background: radial-gradient(circle farthest-side at 10px center, $color-green-light, $color-green-medium);
+    background: #000;
   }
 
 }

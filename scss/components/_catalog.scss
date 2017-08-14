@@ -58,13 +58,16 @@
   &:hover {
 
     i {
-      color: $color-orange;
       margin: 0 10px;
     }
 
     .catalog-item-name {
-      color: $color-orange;
+      color: #fff;
       text-decoration: none;
+    }
+
+    .catalog-item-amount {
+      background: #000;
     }
 
   }
