@@ -105,11 +105,12 @@
 
   .image-wrap {
     width: 100%;
-    padding-top: 28.5%;
+    padding-top: 28.4%;
     position: relative;
 
     img {
       width: auto;
+      min-width: 100%;
       height: auto;
       position: absolute;
       left: calc(50% - 615px);
