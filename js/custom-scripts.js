@@ -28,6 +28,35 @@ $(window).ready(function() {
 
     });
 
+    $('.product-card').hover(
+        function () {
+            if ($(window).width() > 980) {
+
+                $(this).addClass('active');
+
+            }
+        },
+        function () {
+
+            if ($(window).width() > 980) {
+
+                $(this).removeClass('active');
+
+            }
+
+        }
+    );
+
+    $('.product-card').click(function() {
+
+        if($(window).width() < 981) {
+
+            $(this).toggleClass('active');
+
+        }
+
+    });
+
     $('.custom-select .current-value').click(function() {
 
         $(this).parent().toggleClass('active');
@@ -55,12 +84,37 @@ $(window).ready(function() {
     });
 
     $('.slider-banner').slick({
-        dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         responsive: [
             {
-                breakpoint: 641,
+                breakpoint: 981,
                 settings: {
-                    arrows: false
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+    $('.products-slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        appendArrows: '.products-main-control',
+        prevArrow: '.products-main-prev',
+        nextArrow: '.products-main-next',
+        responsive: [
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 3
                 }
             }
         ]
@@ -93,33 +147,5 @@ $(window).ready(function() {
             }
         }
     });
-
-    /*if($(window).width() < 769) {
-        $('.products-list').slick({
-            appendArrows: '.products-main-control',
-            prevArrow: '.products-main-prev',
-            nextArrow: '.products-main-next',
-            slidesToShow: 4,
-            infinite: false
-        });
-    } else {
-        $('.products-list').slick('unslick');
-    }
-
-    $(window).resize(function() {
-
-        if($(window).width() < 769) {
-            $('.products-list').slick({
-                appendArrows: '.products-main-control',
-                prevArrow: '.products-main-prev',
-                nextArrow: '.products-main-next',
-                slidesToShow: 4,
-                infinite: false
-            });
-        } else {
-            $('.products-list').slick('unslick');
-        }
-
-    });*/
 
 });

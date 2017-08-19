@@ -34,27 +34,10 @@
 
 }
 
-@media(max-width: 980px) {
-
-  .aside-catalog {
-
-    a {
-      padding: 5px 0 5px 15px;
-      font-size: 12px;
-    }
-
-  }
-
-}
-
 @media(max-width: 768px) {
 
   .aside-catalog {
     display: none;
   }
-
-}
-
-@media(max-width: 480px) {
 
 }

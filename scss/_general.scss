@@ -137,15 +137,7 @@ input:focus:-ms-input-placeholder {
   z-index: 1003;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  width: 100%;
-  max-width: 1920px;
-  min-width: 320px;
-  margin: 0 auto;
-  overflow: hidden;
+body {
   background: #85c36c url(../images/background-general.png) no-repeat center top;
 
   &.page-main {
@@ -163,7 +155,24 @@ input:focus:-ms-input-placeholder {
 
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1230px;
+  min-width: 320px;
+  margin: 0 auto;
+
+  @media(max-width: 1230px) {
+    overflow: hidden;
+  }
+
+}
+
 main {
+  display: block;
+  width: 100%;
   flex-grow: 1;
   background: #fff;
 }

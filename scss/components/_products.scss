@@ -41,7 +41,6 @@
   div {
     display: inline-block;
     vertical-align: middle;
-    margin: 0 0 0 10px;
     font-size: 22px;
     color: $color-orange;
 
@@ -51,6 +50,10 @@
 
     &:hover {
       color: #000;
+    }
+
+    &:last-of-type {
+      margin: 0 0 0 10px;
     }
 
   }
@@ -65,17 +68,25 @@
   flex-wrap: wrap;
 }
 
+.products-slider {
+  display: none;
+}
+
 .product-card {
-  width: 23%;
+  width: calc(25% - 30px);
   border: 1px solid #e7e8e7;
-  margin: 25px 2% 0 0;
+  margin: 30px 30px 0 0!important;
   text-align: center;
+  transition: .4s;
+  background: #fff;
+  position: relative;
 
   &:nth-of-type(4n) {
-    margin: 2.5% 0 0 0;
+    margin: 30px 0 0 0!important;
   }
 
   h3 a {
+    display: inline-block;
     text-decoration: none;
 
     span {
@@ -181,7 +192,6 @@
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
-  position: relative;
 
   span {
     display: inline-block;
@@ -217,15 +227,17 @@
 }
 
 .product-card-add-to {
-  display: none;
+  display: block;
   width: 100%;
   background: #e7e8e7;
   padding: 15px 0 15px 20px;
   text-align: left;
   position: absolute;
   left: 0;
-  top: 100%;
-  z-index: 10;
+  top: 50%;
+  transition: .4s ease-out;
+  z-index: -1;
+  opacity: 0;
 
   label {
     display: block;
@@ -270,71 +282,27 @@
 
 }
 
-.product-card:hover .product-card-add-to {
-  display: block;
+.product-card.active .product-card-add-to {
+  top: 100%;
+  opacity: 1;
+  z-index: 1;
 }
 
-@media(min-width: 1400px) {
+@media(max-width: 1230px) {
 
-  .product-card {
-    width: 18.5%;
-    border: 1px solid #e7e8e7;
-    margin: 25px 1.5% 0 0;
+  .product-card-add-to {
+    padding: 15px 0 15px 15px;
 
-    &:nth-of-type(4n) {
-      margin: 25px 1.5% 0 0;
+    i {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
     }
 
-    &:nth-of-type(5n) {
-      margin: 25px 0 0 0;
+    span {
+      font-size: 10px;
     }
 
-  }
-
-}
-
-@media(min-width: 1600px) {
-
-  .product-card {
-    width: 16%;
-    border: 1px solid #e7e8e7;
-    margin: 25px .8% 0 0;
-
-    &:nth-of-type(4n),
-    &:nth-of-type(5n) {
-      margin: 25px .8% 0 0;
-    }
-
-    &:nth-of-type(6n) {
-      margin: 25px 0 0 0;
-    }
-
-  }
-
-}
-
-@media(max-width: 980px) {
-
-  .products-main-filter {
-
-    a {
-      margin: 0 10px 0 0;
-      font-size: 16px;
-    }
-
-  }
-
-  .products-main-controls {
-
-    a {
-      font-size: 18px;
-    }
-
-  }
-
-  .product-card-image {
-    width: 100px;
-    height: 100px;
   }
 
   .product-card-marker {
@@ -354,6 +322,46 @@
 
   }
 
+}
+
+@media(max-width: 1080px) {
+
+  .product-card,
+  .product-card:nth-of-type(4n) {
+    width: calc(33.333333% - 20px);
+    margin: 30px 30px 0 0!important;
+  }
+
+  .product-card:nth-of-type(3n) {
+    margin: 30px 0 0 0!important;
+  }
+
+}
+
+@media(max-width: 980px) {
+
+  .products-main-filter {
+
+    a {
+      margin: 0 10px 0 0;
+      font-size: 14px;
+    }
+
+  }
+
+  .products-main-controls {
+
+    a {
+      font-size: 18px;
+    }
+
+  }
+
+  .product-card-image {
+    width: 100px;
+    height: 100px;
+  }
+
   .add-to-cart {
 
     .icon-cart {
@@ -371,6 +379,17 @@
 
   }
 
+  .product-card,
+  .product-card:nth-of-type(3n),
+  .product-card:nth-of-type(4n) {
+    width: calc(50% - 30px);
+    margin: 30px 30px 0 0!important;
+  }
+
+  .product-card:nth-of-type(2n) {
+    margin: 30px 0 0 0!important;
+  }
+
 }
 
 @media(max-width: 768px) {
@@ -380,6 +399,20 @@
     order: 1;
   }
 
+  .products-slider {
+    display: block;
+    width: 968px;
+    margin-left: calc(50% - 484px);
+    padding-bottom: 90px;
+    margin-bottom: -90px;
+
+    .slider-track,
+    .slick-list {
+      overflow: visible!important;
+    }
+
+  }
+
   .products-main-header {
     border-bottom: none;
   }
@@ -387,27 +420,23 @@
   .products-main-filter {
 
     a {
-      font-size: 14px;
+      font-size: 13px;
     }
 
   }
 
   .products-list {
-    display: block;
-    width: 968px;
-    margin-left: calc(50% - 484px);
-    font-size: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    padding-bottom: 90px;
-    margin-bottom: -90px;
+    display: none;
   }
 
-  .product-card {
+  .product-card,
+  .product-card:nth-of-type(2n),
+  .product-card:nth-of-type(3n),
+  .product-card:nth-of-type(4n) {
     transition: .4s;
     display: inline-block;
     width: 210px;
-    margin: 0 16px 20px;
+    margin: 0 16px 20px!important;
   }
 
 }
@@ -440,7 +469,7 @@
 
   }
 
-  .products-list {
+  .products-slider {
     width: 726px;
     margin-left: calc(50% - 363px);
   }
