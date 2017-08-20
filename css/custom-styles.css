@@ -4081,7 +4081,6 @@ aside {
     left: 0;
     top: calc(100% + 5px);
     background: #eceeeb;
-    overflow: hidden;
     border-radius: 8px;
     padding: 5px 10px; }
   .custom-select li {
@@ -4459,7 +4458,9 @@ footer {
   margin: 0 10px 0 0; }
 .footer-currency .custom-select {
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle;
+  position: relative;
+  z-index: 1; }
 
 .footer-offerta {
   width: 63%;
@@ -4475,7 +4476,9 @@ footer {
 @media (max-width: 768px) {
   .footer-panel {
     background: #fff;
-    padding: 25px; }
+    padding: 25px;
+    position: relative;
+    z-index: -1; }
 
   .logo-footer {
     display: none; }
@@ -4488,7 +4491,9 @@ footer {
     padding: 15px 0 0 0; }
 
   .footer-nav {
-    justify-content: center; }
+    justify-content: center;
+    position: relative;
+    z-index: 10; }
 
   .footer-currency span {
     font-size: 15px;

@@ -75,6 +75,8 @@ footer {
   .custom-select {
     display: inline-block;
     vertical-align: middle;
+    position: relative;
+    z-index: 1;
   }
 
 }
@@ -105,6 +107,8 @@ footer {
   .footer-panel {
     background: #fff;
     padding: 25px;
+    position: relative;
+    z-index: -1;
   }
 
   .logo-footer {
@@ -122,6 +126,8 @@ footer {
 
   .footer-nav {
     justify-content: center;
+    position: relative;
+    z-index: 10;
   }
 
   .footer-currency {
