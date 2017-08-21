@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>Главная с авторизацией</title>
     <link rel="stylesheet" href="css/custom-styles.css">
 </head>
 <body>
 
 <div class="preloader"></div>
 
-<div class="wrapper page-main">
+<div class="wrapper page-inner">
 
     <header role="banner">
 
@@ -30,6 +30,7 @@
                 <a href="page-price-list.html">Прайс</a>
                 <a href="page-callback.html">Обратная связь</a>
                 <a href="page-help.html">Помощь</a>
+                <a href="page-bookmarks.html">Закладки <span class="bookmarks-amount">75</span></a>
             </nav>
 
             <div class="header-cart">
@@ -72,27 +73,27 @@
 
             </form>
 
-            <form action="#" class="form-sign-in">
+            <div class="account-panel">
 
-                <span>Войдите или </span>
-                <button class="to-sign-up">зарегистрируйтесь</button>
+                <div class="account-panel-title">Добро пожаловать, <span class="account-panel-name">Growerz</span>!</div>
 
-                <fieldset>
+                <div class="account-panel-exit">
+                    <a href="#">Выйти из сеанса</a>
+                    <i class="fa fa-chevron-right"></i>
+                </div>
 
-                    <label>
-                        <input type="text" placeholder="Логин">
-                    </label>
+                <div class="account-panel-discount">
+                    <div class="account-discount-icon"><img src="images/icon-discount.png" alt="discount"></div>
+                    <span class="account-discount-text">Ваша скидка</span>
+                    <span class="account-discount-value">7%</span>
+                </div>
 
-                    <label>
-                        <span class="form-note">?</span>
-                        <input type="password" placeholder="Пароль">
-                    </label>
+                <a href="page-cabinet.html" class="account-panel-cabinet">
+                    <i class="fa fa-user"></i>
+                    <span>Личный кабинет</span>
+                </a>
 
-                    <button type="submit" class="button-form">Войти</button>
-
-                </fieldset>
-
-            </form>
+            </div>
 
         </div>
 
@@ -101,6 +102,12 @@
     <main>
 
         <div class="catalog">
+
+            <ul class="breadcrumbs">
+                <li>Barney's Farm Seeds</li>
+                <li><a href="page-catalog.html">Каталог</a></li>
+                <li><a href="index.html">Главная</a></li>
+            </ul>
 
             <div class="catalog-burger">
 
@@ -184,96 +191,172 @@
 
         </div>
 
-        <div class="slider-banner">
-
-            <div class="slide-banner">
-                <img src="images/slide-banner-1.jpg" alt="slide-banner">
-            </div>
-
-            <div class="slide-banner">
-                <img src="images/slide-banner-1.jpg" alt="slide-banner">
-            </div>
-
-            <div class="slide-banner">
-                <img src="images/slide-banner-1.jpg" alt="slide-banner">
-            </div>
-
-            <div class="slide-banner">
-                <img src="images/slide-banner-1.jpg" alt="slide-banner">
-            </div>
-
-            <div class="slide-banner">
-                <img src="images/slide-banner-1.jpg" alt="slide-banner">
-            </div>
-
-            <div class="slide-banner">
-                <img src="images/slide-banner-1.jpg" alt="slide-banner">
-            </div>
-
-        </div>
-
         <div class="content-columns">
 
             <aside>
 
-                <div class="aside-catalog">
+                <div class="aside-compare">
 
-                    <div class="aside-title">Каталог</div>
+                    <div class="aside-title">Сравнение</div>
 
-                    <a href="#">Advanced seeds</a>
+                    <a href="page-product.html">Laughing Buddha <br>(5 семян) Fem.</a>
 
-                    <a href="#">Barney's Farm Seeds</a>
+                    <a href="page-product.html">Night Shade<br>(5 семян) Fem.</a>
 
-                    <a href="#">Sensi Seeds</a>
+                    <a href="page-product.html">Rock Bud <br>(10 семян)</a>
 
-                    <a href="#">White Label Seeds</a>
-
-                    <a href="#">Green House Seeds</a>
-
-                    <a href="#">Joint Doctor Seeds</a>
-
-                    <a href="#">Paradise Seeds</a>
-
-                    <a href="#">DNA Genetics Seeds</a>
-
-                    <a href="#">Serious Seeds</a>
-
-                    <a href="#">T.H.Seeds</a>
-
-                    <a href="#">Somas Seeds</a>
-
-                    <a href="#">World of Seeds</a>
-
-                    <a href="#">Seedsman Seeds</a>
-
-                    <a href="#">Sweet Seeds</a>
-
-                    <a href="#">Dinafem Seeds</a>
+                    <a href="#" class="aside-button">Сравнить »</a>
 
                 </div>
 
-                <div class="aside-news">
+                <form action="#" class="form-filter">
 
-                    <div class="aside-title">Новости</div>
+                    <div class="aside-title">Фильтры</div>
 
-                    <div class="aside-news-items">
-                        <h3><a href="#">Делаем скидки на некоторые товарные позиции: скидки до 50%</a></h3>
-                        <time>17.03.2017</time>
-                    </div>
+                    <fieldset class="filter-cost">
 
-                    <div class="aside-news-items">
-                        <h3><a href="#">В нашем магазине появились новые сорта Reserva Privada</a></h3>
-                        <time>25.05.2017</time>
-                    </div>
+                        <div class="filter-title">Цена</div>
 
-                    <div class="aside-news-items">
-                        <h3><a href="#">С наступающим Новым годом и Рождеством!</a></h3>
-                        <time>31.12.2016</time>
-                    </div>
+                    </fieldset>
 
-                    <a href="#" class="show-more">Все новости <span>»</span></a>
+                    <fieldset class="filter-checkbox">
 
-                </div>
+                        <div class="filter-title">Количество в упаковке</div>
+
+                        <ul class="filter-list">
+
+                            <li>
+                                <input type="checkbox" name="filter-amount" id="filter-amount-1">
+                                <label for="filter-amount-1">5</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" name="filter-amount" id="filter-amount-2">
+                                <label for="filter-amount-2">10</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" name="filter-amount" id="filter-amount-3">
+                                <label for="filter-amount-3">15</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" name="filter-amount" id="filter-amount-4">
+                                <label for="filter-amount-4">20</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" name="filter-amount" id="filter-amount-5">
+                                <label for="filter-amount-5">100</label>
+                            </li>
+
+                        </ul>
+
+                    </fieldset>
+
+                    <fieldset class="filter-radio">
+
+                        <div class="filter-title">Сорт продукции</div>
+
+                        <ul class="filter-list">
+
+                            <li>
+                                <input type="radio" name="filter-sort" id="filter-sort-1">
+                                <label for="filter-sort-1">Феминизированный</label>
+                            </li>
+
+                            <li>
+                                <input type="radio" name="filter-sort" id="filter-sort-2">
+                                <label for="filter-sort-2">Открытый грунт</label>
+                            </li>
+
+                            <li>
+                                <input type="radio" name="filter-sort" id="filter-sort-3">
+                                <label for="filter-sort-3">Закрытый грунт</label>
+                            </li>
+
+                            <li>
+                                <input type="radio" name="filter-sort" id="filter-sort-4">
+                                <label for="filter-sort-4">Индика</label>
+                            </li>
+
+                        </ul>
+
+                    </fieldset>
+
+                    <fieldset class="filter-checkbox">
+
+                        <div class="filter-title">Период цветения</div>
+
+                        <ul class="filter-list">
+
+                            <li>
+                                <input type="checkbox" name="filter-period" id="filter-period-1">
+                                <label for="filter-period-1">10-20 дней</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" name="filter-period" id="filter-period-2">
+                                <label for="filter-period-2">25-50 дней</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" name="filter-period" id="filter-period-3">
+                                <label for="filter-period-3">30-50 дней</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" name="filter-period" id="filter-period-4">
+                                <label for="filter-period-4">10-55 дней</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" name="filter-period" id="filter-period-5">
+                                <label for="filter-period-5">50-100 дней</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" name="filter-period" id="filter-period-6">
+                                <label for="filter-period-6">75-150 дней</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" name="filter-period" id="filter-period-7">
+                                <label for="filter-period-7">50-100 дней</label>
+                            </li>
+
+                        </ul>
+
+                    </fieldset>
+
+                    <fieldset class="filter-radio">
+
+                        <div class="filter-title">Сорт продукции</div>
+
+                        <ul class="filter-list">
+
+                            <li>
+                                <input type="radio" name="filter-sortt" id="filter-sortt-1">
+                                <label for="filter-sortt-1">Феминизированный</label>
+                            </li>
+
+                            <li>
+                                <input type="radio" name="filter-sortt" id="filter-sortt-2">
+                                <label for="filter-sortt-2">Открытый грунт</label>
+                            </li>
+
+                            <li>
+                                <input type="radio" name="filter-sortt" id="filter-sortt-3">
+                                <label for="filter-sortt-3">Закрытый грунт</label>
+                            </li>
+
+                        </ul>
+
+                    </fieldset>
+
+                    <button type="submit" class="aside-button">Показать »</button>
+
+                </form>
 
             </aside>
 
@@ -283,21 +366,33 @@
 
                     <div class="products-filter">
 
-                        <a href="#">Популярные товары</a>
+                        <a href="#">Регулярные <span class="products-filter-amount">(1)</span></a>
 
-                        <a href="#">Новые товары</a>
-
-                        <a href="#">Со скидкой</a>
+                        <a href="#">Феминизированные <span class="products-filter-amount">(1)</span></a>
 
                         <a class="active">Все</a>
 
                     </div>
 
+                    <div class="products-filter-sort">
+                        <span>Сортировать по:</span>
+                        <div class="custom-select">
+                            <div class="current-value">По наименованию</div>
+                            <ul>
+                                <li>По наименованию</li>
+                                <li>По стоимости</li>
+                                <li>По новизне</li>
+                                <li>По количеству семян</li>
+                            </ul>
+                            <label><input type="text"></label>
+                        </div>
+                    </div>
+
                     <div class="products-header-controls">
 
-                        <div class="products-main-control products-main-prev"><i class="fa fa-chevron-left"></i></div>
+                        <div class="products-control products-control-prev"><i class="fa fa-chevron-left"></i></div>
 
-                        <div class="products-main-control products-main-next"><i class="fa fa-chevron-right"></i></div>
+                        <div class="products-control products-control-next"><i class="fa fa-chevron-right"></i></div>
 
                     </div>
 
@@ -338,9 +433,22 @@
 
                             <span class="product-cost-new">1 557 руб.</span>
 
-                            <span class="product-cost-old">1 700 руб.</span>
-
                         </div>
+
+                        <a href="#" class="product-card-another-cost">Хотите другую цену?</a>
+
+                        <label class="product-card-amount">
+                            <span>Количество</span>
+                            <input type="text" placeholder="1">
+                        </label>
+
+                        <ul class="product-card-parameters">
+                            <li>Открытый грунт</li>
+                            <li>Закрытый грунт</li>
+                            <li>Индика/Сатива</li>
+                            <li>Феминизированный</li>
+                            <li>Победитель</li>
+                        </ul>
 
                         <a href="#" class="add-to-cart">
 
@@ -395,6 +503,21 @@
                             <span class="product-cost-new">2 577 руб.</span>
 
                         </div>
+
+                        <a href="#" class="product-card-another-cost">Хотите другую цену?</a>
+
+                        <label class="product-card-amount">
+                            <span>Количество</span>
+                            <input type="text" placeholder="1">
+                        </label>
+
+                        <ul class="product-card-parameters">
+                            <li>Открытый грунт</li>
+                            <li>Закрытый грунт</li>
+                            <li>Индика/Сатива</li>
+                            <li>Феминизированный</li>
+                            <li>Победитель</li>
+                        </ul>
 
                         <a href="#" class="add-to-cart">
 
@@ -454,6 +577,21 @@
 
                         </div>
 
+                        <a href="#" class="product-card-another-cost">Хотите другую цену?</a>
+
+                        <label class="product-card-amount">
+                            <span>Количество</span>
+                            <input type="text" placeholder="1">
+                        </label>
+
+                        <ul class="product-card-parameters">
+                            <li>Открытый грунт</li>
+                            <li>Закрытый грунт</li>
+                            <li>Индика/Сатива</li>
+                            <li>Феминизированный</li>
+                            <li>Победитель</li>
+                        </ul>
+
                         <a href="#" class="add-to-cart">
 
                             <span class="icon-cart"><img src="images/icon-cart.png" alt="cart"></span>
@@ -510,9 +648,22 @@
 
                             <span class="product-cost-new">1 999 руб.</span>
 
-                            <span class="product-cost-old">2 500 руб.</span>
-
                         </div>
+
+                        <a href="#" class="product-card-another-cost">Хотите другую цену?</a>
+
+                        <label class="product-card-amount">
+                            <span>Количество</span>
+                            <input type="text" placeholder="1">
+                        </label>
+
+                        <ul class="product-card-parameters">
+                            <li>Открытый грунт</li>
+                            <li>Закрытый грунт</li>
+                            <li>Индика/Сатива</li>
+                            <li>Феминизированный</li>
+                            <li>Победитель</li>
+                        </ul>
 
                         <a href="#" class="add-to-cart">
 
@@ -572,6 +723,21 @@
 
                         </div>
 
+                        <a href="#" class="product-card-another-cost">Хотите другую цену?</a>
+
+                        <label class="product-card-amount">
+                            <span>Количество</span>
+                            <input type="text" placeholder="1">
+                        </label>
+
+                        <ul class="product-card-parameters">
+                            <li>Открытый грунт</li>
+                            <li>Закрытый грунт</li>
+                            <li>Индика/Сатива</li>
+                            <li>Феминизированный</li>
+                            <li>Победитель</li>
+                        </ul>
+
                         <a href="#" class="add-to-cart">
 
                             <span class="icon-cart"><img src="images/icon-cart.png" alt="cart"></span>
@@ -625,6 +791,21 @@
                             <span class="product-cost-new">2 577 руб.</span>
 
                         </div>
+
+                        <a href="#" class="product-card-another-cost">Хотите другую цену?</a>
+
+                        <label class="product-card-amount">
+                            <span>Количество</span>
+                            <input type="text" placeholder="1">
+                        </label>
+
+                        <ul class="product-card-parameters">
+                            <li>Открытый грунт</li>
+                            <li>Закрытый грунт</li>
+                            <li>Индика/Сатива</li>
+                            <li>Феминизированный</li>
+                            <li>Победитель</li>
+                        </ul>
 
                         <a href="#" class="add-to-cart">
 
@@ -686,6 +867,21 @@
 
                         </div>
 
+                        <a href="#" class="product-card-another-cost">Хотите другую цену?</a>
+
+                        <label class="product-card-amount">
+                            <span>Количество</span>
+                            <input type="text" placeholder="1">
+                        </label>
+
+                        <ul class="product-card-parameters">
+                            <li>Открытый грунт</li>
+                            <li>Закрытый грунт</li>
+                            <li>Индика/Сатива</li>
+                            <li>Феминизированный</li>
+                            <li>Победитель</li>
+                        </ul>
+
                         <a href="#" class="add-to-cart">
 
                             <span class="icon-cart"><img src="images/icon-cart.png" alt="cart"></span>
@@ -742,9 +938,22 @@
 
                             <span class="product-cost-new">1 999 руб.</span>
 
-                            <span class="product-cost-old">2 500 руб.</span>
-
                         </div>
+
+                        <a href="#" class="product-card-another-cost">Хотите другую цену?</a>
+
+                        <label class="product-card-amount">
+                            <span>Количество</span>
+                            <input type="text" placeholder="1">
+                        </label>
+
+                        <ul class="product-card-parameters">
+                            <li>Открытый грунт</li>
+                            <li>Закрытый грунт</li>
+                            <li>Индика/Сатива</li>
+                            <li>Феминизированный</li>
+                            <li>Победитель</li>
+                        </ul>
 
                         <a href="#" class="add-to-cart">
 
@@ -808,9 +1017,22 @@
 
                             <span class="product-cost-new">1 557 руб.</span>
 
-                            <span class="product-cost-old">1 700 руб.</span>
-
                         </div>
+
+                        <a href="#" class="product-card-another-cost">Хотите другую цену?</a>
+
+                        <label class="product-card-amount">
+                            <span>Количество</span>
+                            <input type="text" placeholder="1">
+                        </label>
+
+                        <ul class="product-card-parameters">
+                            <li>Открытый грунт</li>
+                            <li>Закрытый грунт</li>
+                            <li>Индика/Сатива</li>
+                            <li>Феминизированный</li>
+                            <li>Победитель</li>
+                        </ul>
 
                         <a href="#" class="add-to-cart">
 
@@ -865,6 +1087,21 @@
                             <span class="product-cost-new">2 577 руб.</span>
 
                         </div>
+
+                        <a href="#" class="product-card-another-cost">Хотите другую цену?</a>
+
+                        <label class="product-card-amount">
+                            <span>Количество</span>
+                            <input type="text" placeholder="1">
+                        </label>
+
+                        <ul class="product-card-parameters">
+                            <li>Открытый грунт</li>
+                            <li>Закрытый грунт</li>
+                            <li>Индика/Сатива</li>
+                            <li>Феминизированный</li>
+                            <li>Победитель</li>
+                        </ul>
 
                         <a href="#" class="add-to-cart">
 
@@ -924,6 +1161,21 @@
 
                         </div>
 
+                        <a href="#" class="product-card-another-cost">Хотите другую цену?</a>
+
+                        <label class="product-card-amount">
+                            <span>Количество</span>
+                            <input type="text" placeholder="1">
+                        </label>
+
+                        <ul class="product-card-parameters">
+                            <li>Открытый грунт</li>
+                            <li>Закрытый грунт</li>
+                            <li>Индика/Сатива</li>
+                            <li>Феминизированный</li>
+                            <li>Победитель</li>
+                        </ul>
+
                         <a href="#" class="add-to-cart">
 
                             <span class="icon-cart"><img src="images/icon-cart.png" alt="cart"></span>
@@ -980,9 +1232,22 @@
 
                             <span class="product-cost-new">1 999 руб.</span>
 
-                            <span class="product-cost-old">2 500 руб.</span>
-
                         </div>
+
+                        <a href="#" class="product-card-another-cost">Хотите другую цену?</a>
+
+                        <label class="product-card-amount">
+                            <span>Количество</span>
+                            <input type="text" placeholder="1">
+                        </label>
+
+                        <ul class="product-card-parameters">
+                            <li>Открытый грунт</li>
+                            <li>Закрытый грунт</li>
+                            <li>Индика/Сатива</li>
+                            <li>Феминизированный</li>
+                            <li>Победитель</li>
+                        </ul>
 
                         <a href="#" class="add-to-cart">
 
@@ -1042,6 +1307,21 @@
 
                         </div>
 
+                        <a href="#" class="product-card-another-cost">Хотите другую цену?</a>
+
+                        <label class="product-card-amount">
+                            <span>Количество</span>
+                            <input type="text" placeholder="1">
+                        </label>
+
+                        <ul class="product-card-parameters">
+                            <li>Открытый грунт</li>
+                            <li>Закрытый грунт</li>
+                            <li>Индика/Сатива</li>
+                            <li>Феминизированный</li>
+                            <li>Победитель</li>
+                        </ul>
+
                         <a href="#" class="add-to-cart">
 
                             <span class="icon-cart"><img src="images/icon-cart.png" alt="cart"></span>
@@ -1095,6 +1375,21 @@
                             <span class="product-cost-new">2 577 руб.</span>
 
                         </div>
+
+                        <a href="#" class="product-card-another-cost">Хотите другую цену?</a>
+
+                        <label class="product-card-amount">
+                            <span>Количество</span>
+                            <input type="text" placeholder="1">
+                        </label>
+
+                        <ul class="product-card-parameters">
+                            <li>Открытый грунт</li>
+                            <li>Закрытый грунт</li>
+                            <li>Индика/Сатива</li>
+                            <li>Феминизированный</li>
+                            <li>Победитель</li>
+                        </ul>
 
                         <a href="#" class="add-to-cart">
 
@@ -1156,6 +1451,21 @@
 
                         </div>
 
+                        <a href="#" class="product-card-another-cost">Хотите другую цену?</a>
+
+                        <label class="product-card-amount">
+                            <span>Количество</span>
+                            <input type="text" placeholder="1">
+                        </label>
+
+                        <ul class="product-card-parameters">
+                            <li>Открытый грунт</li>
+                            <li>Закрытый грунт</li>
+                            <li>Индика/Сатива</li>
+                            <li>Феминизированный</li>
+                            <li>Победитель</li>
+                        </ul>
+
                         <a href="#" class="add-to-cart">
 
                             <span class="icon-cart"><img src="images/icon-cart.png" alt="cart"></span>
@@ -1212,9 +1522,22 @@
 
                             <span class="product-cost-new">1 999 руб.</span>
 
-                            <span class="product-cost-old">2 500 руб.</span>
-
                         </div>
+
+                        <a href="#" class="product-card-another-cost">Хотите другую цену?</a>
+
+                        <label class="product-card-amount">
+                            <span>Количество</span>
+                            <input type="text" placeholder="1">
+                        </label>
+
+                        <ul class="product-card-parameters">
+                            <li>Открытый грунт</li>
+                            <li>Закрытый грунт</li>
+                            <li>Индика/Сатива</li>
+                            <li>Феминизированный</li>
+                            <li>Победитель</li>
+                        </ul>
 
                         <a href="#" class="add-to-cart">
 
@@ -1241,6 +1564,22 @@
 
                     </div>
 
+                </div>
+
+                <div class="nav-pages">
+                    <span>Страницы: </span>
+                    <ul>
+                        <li><a href="#"></a>1</li>
+                        <li><a href="#"></a>2</li>
+                        <li><a href="#"></a>3</li>
+                        <li><a href="#"></a>4</li>
+                        <li><a href="#"></a>5</li>
+                        <li><a href="#"></a>6</li>
+                        <li><a href="#"></a>7</li>
+                        <li><a href="#"></a>8</li>
+                        <li><a href="#"></a>9</li>
+                        <li><a href="#"></a>10</li>
+                    </ul>
                 </div>
 
             </div>

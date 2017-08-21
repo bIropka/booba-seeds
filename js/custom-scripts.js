@@ -107,9 +107,9 @@ $(window).ready(function() {
     $('.products-slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
-        appendArrows: '.products-main-control',
-        prevArrow: '.products-main-prev',
-        nextArrow: '.products-main-next',
+        appendArrows: '.products-control',
+        prevArrow: '.products-control-prev',
+        nextArrow: '.products-control-next',
         responsive: [
             {
                 breakpoint: 481,
