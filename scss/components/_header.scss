@@ -317,8 +317,17 @@ header {
   }
 
   .header-nav {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1002;
     justify-content: flex-end;
     padding: 15px 20px;
+  }
+
+  .header-panel {
+    margin-top: 69px;
   }
 
   .header-cart-text {
