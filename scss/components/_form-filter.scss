@@ -1,0 +1,149 @@
+/*********************************************
+*********** form-filter
+**********************************************/
+
+.form-filter {
+
+  .filter-title {
+    font-weight: 500;
+    margin: 0 0 15px;
+  }
+
+  fieldset {
+    margin: 0 0 15px;
+
+    &:last-of-type {
+      margin: 0;
+    }
+
+  }
+
+  li {
+    display: block;
+    margin: 7px 0;
+  }
+
+}
+
+.filter-cost {
+  max-width: 480px;
+}
+
+#filter-cost-item {
+  padding: 0;
+}
+
+#filter-cost-item .ui-rangeSlider-container, #filter-cost-item .ui-rangeSlider-innerBar  {
+  width: 100%;
+  height: 6px;
+  background: #fff;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 3px;
+}
+
+#filter-cost-item .ui-rangeSlider-container {
+  border: 1px solid #d2dfc6;
+}
+
+#filter-cost-item .ui-rangeSlider {
+  height: auto;
+  padding: 0;
+}
+
+#filter-cost-item .ui-rangeSlider-arrow {
+  display: none;
+}
+
+#filter-cost-item .ui-rangeSlider-bar {
+  background: $color-green-light;
+  border: none;
+  border-top: 1px solid $color-green-light;
+  border-bottom: 1px solid $color-green-light;
+  height: 6px;
+  margin-top: 0;
+  opacity: 1;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+#filter-cost-item .ui-rangeSlider-label {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ececec;
+  background: $color-orange;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 0;
+  bottom: auto;
+  top: auto;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: -6px 0 0 0;
+}
+
+#filter-cost-item .ui-rangeSlider-label-value, #filter-cost-item .ui-rangeSlider-label-inner {
+  display: none;
+}
+
+.filter-cost-fields {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 200px;
+}
+
+.filter-cost-fields label {
+  display: block;
+  position: relative;
+}
+
+.filter-cost-fields label:first-of-type:after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  right: -27px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.filter-cost-fields input {
+  font-size: 14px;
+  color: #000;
+  display: block;
+  margin: 0;
+  text-align: center;
+  width: 80px;
+  height: 38px;
+  vertical-align: middle;
+  background: transparent;
+  border: 1px solid #d2dfc6;
+  border-radius: 8px;
+}
+
+@media(max-width: 1230px) {
+
+}
+
+@media(max-width: 980px) {
+
+}
+
+@media(max-width: 768px) {
+
+}
+
+@media(max-width: 480px) {
+
+}

@@ -5,6 +5,7 @@
 @import "fonts";
 
 @import "../libs/jquery-ui-1.12.1.custom/jquery-ui.min";
+@import "../libs/jQRangeSlider-5.7.2/iThing-min";
 @import "../libs/slick-1.6.0/slick";
 @import "../libs/font-awesome-4.7.0/scss/font-awesome";
 @import "../libs/booba-font/style";
@@ -23,9 +24,16 @@
 @import "components/header";
 @import "components/footer";
 
+/* page-main */
+
 @import "components/catalog";
 @import "components/promo";
 @import "components/slider-banner";
-@import "components/aside-catalog";
+@import "components/aside-list";
 @import "components/aside-news";
 @import "components/products";
+
+/* page-inner */
+@import "components/breadcrumbs";
+@import "components/form-filter";
+@import "components/nav-pages";

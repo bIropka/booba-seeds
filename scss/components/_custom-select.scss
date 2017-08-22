@@ -7,9 +7,12 @@
   z-index: 100;
 
   .current-value {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     width: 200px;
     height: 42px;
-    padding: 0 40px 0 15px;
+    padding: 0 15px;
     line-height: 42px;
     background: #eceeeb;
     border-radius: 8px;
@@ -17,18 +20,24 @@
     transition: .4s;
     cursor: pointer;
 
-    &:before {
+    span {
+      display: block;
+      width: calc(100% - 20px);
+      margin: 0 5px 0 0;
+      line-height: 42px;
+      color: inherit;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &:after {
       content: '\f078';
       font-family: FontAwesome;
       display: block;
       color: $color-orange;
       font-size: 18px;
       line-height: 42px;
-      position: absolute;
-      top: 0;
-      right: 10px;
-      margin: auto;
-      transform-origin: center;
     }
 
     &:hover {
@@ -74,8 +83,73 @@
       display: block;
     }
 
-    .current-value:before {
+    .current-value:after {
       content: '\f077';
+    }
+
+  }
+
+}
+
+.products-filter-sort {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.products-filter-sort .custom-select {
+
+  .current-value {
+    width: auto;
+    max-width: 200px;
+    justify-content: flex-end;
+    color: $color-green-dark;
+    background: none;
+    height: auto;
+    line-height: 1;
+    padding-right: 0;
+
+    span {
+      width: auto;
+      max-width: calc(100% - 20px);
+    }
+
+    &:after {
+      content: '\f078';
+      font-family: FontAwesome;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      background: #000;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 10px;
+      line-height: 1;
+      flex-shrink: 0;
+      margin: 0;
+    }
+
+    &:hover {
+      color: $color-orange;
+    }
+
+  }
+
+  ul {
+    width: 200px;
+    background: rgba(236, 238, 235, .9);
+    border: 1px solid rgba(236, 238, 235, 1);
+    left: auto;
+    right: 0;
+  }
+
+  &.active {
+
+    .current-value:after {
+      content: '\f077';
+      padding-bottom: 2px;
     }
 
   }
@@ -86,6 +160,38 @@
 
   .custom-select .current-value {
     width: 150px;
+  }
+
+}
+
+
+@media(max-width: 480px) {
+
+  .products-filter-sort > span {
+    font-weight: 500;
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .products-filter-sort .custom-select {
+
+    .current-value {
+      padding-left: 3px;
+      max-width: 170px;
+
+      span {
+       font-size: 13px;
+        text-transform: uppercase;
+      }
+
+    }
+
+    li {
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
   }
 
 }

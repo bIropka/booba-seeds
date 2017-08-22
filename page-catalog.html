@@ -105,8 +105,8 @@
 
             <ul class="breadcrumbs">
                 <li>Barney's Farm Seeds</li>
-                <li><a href="page-catalog.html">Каталог</a></li>
-                <li><a href="index.html">Главная</a></li>
+                <li><i class="fa fa-long-arrow-left"></i><a href="page-catalog.html">Каталог</a></li>
+                <li><i class="fa fa-long-arrow-left"></i><a href="index.html">Главная</a></li>
             </ul>
 
             <div class="catalog-burger">
@@ -195,7 +195,15 @@
 
             <aside>
 
-                <div class="aside-compare">
+                <div class="aside-burger">
+
+                    <span class="aside-burger-hidden">Сравнение / Фильтры</span>
+
+                    <span class="aside-burger-visible">Скрыть Сравнение / Фильтры</span>
+
+                </div>
+
+                <div class="aside-list">
 
                     <div class="aside-title">Сравнение</div>
 
@@ -217,6 +225,13 @@
 
                         <div class="filter-title">Цена</div>
 
+                        <div id="filter-cost-item"></div>
+
+                        <div class="filter-cost-fields">
+                            <label><input type="text" id="min-cost"/></label>
+                            <label><input type="text" id="max-cost"/></label>
+                        </div>
+
                     </fieldset>
 
                     <fieldset class="filter-checkbox">
@@ -227,27 +242,27 @@
 
                             <li>
                                 <input type="checkbox" name="filter-amount" id="filter-amount-1">
-                                <label for="filter-amount-1">5</label>
+                                <label for="filter-amount-1"><i class="fa fa-check"></i>5</label>
                             </li>
 
                             <li>
                                 <input type="checkbox" name="filter-amount" id="filter-amount-2">
-                                <label for="filter-amount-2">10</label>
+                                <label for="filter-amount-2"><i class="fa fa-check"></i>10</label>
                             </li>
 
                             <li>
                                 <input type="checkbox" name="filter-amount" id="filter-amount-3">
-                                <label for="filter-amount-3">15</label>
+                                <label for="filter-amount-3"><i class="fa fa-check"></i>15</label>
                             </li>
 
                             <li>
                                 <input type="checkbox" name="filter-amount" id="filter-amount-4">
-                                <label for="filter-amount-4">20</label>
+                                <label for="filter-amount-4"><i class="fa fa-check"></i>20</label>
                             </li>
 
                             <li>
                                 <input type="checkbox" name="filter-amount" id="filter-amount-5">
-                                <label for="filter-amount-5">100</label>
+                                <label for="filter-amount-5"><i class="fa fa-check"></i>100</label>
                             </li>
 
                         </ul>
@@ -292,37 +307,37 @@
 
                             <li>
                                 <input type="checkbox" name="filter-period" id="filter-period-1">
-                                <label for="filter-period-1">10-20 дней</label>
+                                <label for="filter-period-1"><i class="fa fa-check"></i>10-20 дней</label>
                             </li>
 
                             <li>
                                 <input type="checkbox" name="filter-period" id="filter-period-2">
-                                <label for="filter-period-2">25-50 дней</label>
+                                <label for="filter-period-2"><i class="fa fa-check"></i>25-50 дней</label>
                             </li>
 
                             <li>
                                 <input type="checkbox" name="filter-period" id="filter-period-3">
-                                <label for="filter-period-3">30-50 дней</label>
+                                <label for="filter-period-3"><i class="fa fa-check"></i>30-50 дней</label>
                             </li>
 
                             <li>
                                 <input type="checkbox" name="filter-period" id="filter-period-4">
-                                <label for="filter-period-4">10-55 дней</label>
+                                <label for="filter-period-4"><i class="fa fa-check"></i>10-55 дней</label>
                             </li>
 
                             <li>
                                 <input type="checkbox" name="filter-period" id="filter-period-5">
-                                <label for="filter-period-5">50-100 дней</label>
+                                <label for="filter-period-5"><i class="fa fa-check"></i>50-100 дней</label>
                             </li>
 
                             <li>
                                 <input type="checkbox" name="filter-period" id="filter-period-6">
-                                <label for="filter-period-6">75-150 дней</label>
+                                <label for="filter-period-6"><i class="fa fa-check"></i>75-150 дней</label>
                             </li>
 
                             <li>
                                 <input type="checkbox" name="filter-period" id="filter-period-7">
-                                <label for="filter-period-7">50-100 дней</label>
+                                <label for="filter-period-7"><i class="fa fa-check"></i>50-100 дней</label>
                             </li>
 
                         </ul>
@@ -377,9 +392,8 @@
                     <div class="products-filter-sort">
                         <span>Сортировать по:</span>
                         <div class="custom-select">
-                            <div class="current-value">По наименованию</div>
+                            <div class="current-value"><span>По наименованию</span></div>
                             <ul>
-                                <li>По наименованию</li>
                                 <li>По стоимости</li>
                                 <li>По новизне</li>
                                 <li>По количеству семян</li>
@@ -1569,16 +1583,16 @@
                 <div class="nav-pages">
                     <span>Страницы: </span>
                     <ul>
-                        <li><a href="#"></a>1</li>
-                        <li><a href="#"></a>2</li>
-                        <li><a href="#"></a>3</li>
-                        <li><a href="#"></a>4</li>
-                        <li><a href="#"></a>5</li>
-                        <li><a href="#"></a>6</li>
-                        <li><a href="#"></a>7</li>
-                        <li><a href="#"></a>8</li>
-                        <li><a href="#"></a>9</li>
-                        <li><a href="#"></a>10</li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#" class="active">7</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#">10</a></li>
                     </ul>
                 </div>
 
@@ -1617,7 +1631,7 @@
                 <span>Тип валюты:</span>
 
                 <div class="custom-select">
-                    <div class="current-value">Доллары</div>
+                    <div class="current-value"><span>Доллары</span></div>
                     <ul>
                         <li>Гривны</li>
                         <li>Рубли</li>
@@ -1656,9 +1670,9 @@
 </div>
 
 <script src="libs/jquery-3.2.1.min.js"></script>
+<script src="libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 <script src="libs/slick-1.6.0/slick.min.js"></script>
-<script src="libs/scrollPane/mwheelIntent.js"></script>
-<script src="libs/scrollPane/jquery.jscrollpane.min.js"></script>
+<script src="libs/jQRangeSlider-5.7.2/jQRangeSlider-min.js"></script>
 <script src="js/custom-scripts.js"></script>
 </body>
 </html>

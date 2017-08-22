@@ -1,11 +1,11 @@
 /*********************************************
-*********** aside-catalog
+*********** aside-list
 **********************************************/
 
-.aside-catalog {
+.aside-list {
   margin: 0 0 35px 0;
 
-  a {
+  a:not(.aside-button) {
     display: block;
     padding: 5px 0 5px 20px;
     position: relative;
@@ -36,7 +36,7 @@
 
 @media(max-width: 768px) {
 
-  .aside-catalog {
+  .page-main .aside-list {
     display: none;
   }
 

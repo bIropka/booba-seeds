@@ -1,0 +1,78 @@
+/*********************************************
+*********** nav-pages
+**********************************************/
+
+.nav-pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e7e8e7;
+
+  span {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 5px 0 0;
+  }
+
+  ul {
+    font-size: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-green-dark;
+    text-decoration: none;
+    margin: -1px 0;
+    padding: 0 10px;
+
+    &:hover,
+    &.active {
+      color: #fff;
+      background: $color-orange;
+    }
+
+  }
+
+}
+
+@media(max-width: 480px) {
+
+  .products .nav-pages {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    border-left: none;
+    border-right: none;
+
+    span {
+      font-size: 14px;
+      margin: 0 3px 0 0;
+    }
+
+    a {
+      font-size: 14px;
+      padding: 0 6px;
+
+      &:hover {
+
+      }
+
+      &.active {
+        color: #fff;
+        background: $color-orange;
+      }
+
+    }
+
+  }
+
+}
