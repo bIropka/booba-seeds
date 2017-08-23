@@ -296,6 +296,25 @@
       justify-content: center;
     }
 
+    .breadcrumbs li:first-child {
+      max-width: 200px;
+    }
+
+
+  }
+
+  @media(max-width: 640px) {
+
+    .breadcrumbs {
+      left: 0;
+      width: 100%;
+    }
+
+    .breadcrumbs li:first-child {
+      max-width: 100%;
+      text-align: center;
+    }
+
   }
 
   @media(max-width: 480px) {

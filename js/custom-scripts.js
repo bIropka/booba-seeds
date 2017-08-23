@@ -12,18 +12,30 @@ $(window).ready(function() {
 
     });
 
-    if($(window).width() < 769) {
+    if($(window).width() < 641) {
+        $('.product-item-forum').insertAfter('.product-item-rate');
+        $('.product-item-header').insertAfter('.product-item-cost');
+    } else if($(window).width() < 769) {
         $('.form-search').appendTo('header nav');
+        $('.product-item-forum').prependTo('.product-item-cost');
+        $('.product-item-header').prependTo('.product-item');
     } else {
         $('.form-search').insertAfter('.header-logo');
+        $('.product-item-forum').insertAfter('.product-item-rate');
     }
 
     $(window).resize(function() {
 
-        if($(window).width() < 769) {
+        if($(window).width() < 641) {
+            $('.product-item-forum').insertAfter('.product-item-rate');
+            $('.product-item-header').insertAfter('.product-item-cost');
+        } else if($(window).width() < 769) {
             $('.form-search').appendTo('header nav');
+            $('.product-item-forum').prependTo('.product-item-cost');
+            $('.product-item-header').prependTo('.product-item');
         } else {
             $('.form-search').insertAfter('.header-logo');
+            $('.product-item-forum').insertAfter('.product-item-rate');
         }
 
     });
@@ -171,7 +183,15 @@ $(window).ready(function() {
         slidesToShow: 4,
         slidesToScroll: 1,
         asNavFor: '.slider-for',
-        focusOnSelect: true
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 641,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     /***********************/
