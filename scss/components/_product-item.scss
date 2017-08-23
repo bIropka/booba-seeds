@@ -710,4 +710,14 @@
 
 @media(max-width: 480px) {
 
+  .slider-nav .product-item-slide {
+    margin: 0;
+
+    .image-wrap {
+      width: 150px;
+      height: 150px;
+    }
+
+  }
+
 }

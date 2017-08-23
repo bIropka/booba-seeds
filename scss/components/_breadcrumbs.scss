@@ -12,9 +12,13 @@
   li {
     display: inline-block;
     vertical-align: center;
-    color: #fff;
-    font-size: 22px;
-    font-weight: 500;
+
+    h1 {
+      color: #fff;
+      font-size: 22px;
+      font-weight: 500;
+    }
+
   }
 
   i {
@@ -42,7 +46,11 @@
   .breadcrumbs {
 
     li {
-      font-size: 18px;
+
+      h1 {
+        font-size: 18px;
+      }
+
     }
 
     i {
@@ -62,19 +70,28 @@
 
   .breadcrumbs {
     left: 30px;
-    top: auto;
-    bottom: -45px;
+    top: calc(100% + 25px);
+    bottom: auto;
 
     li {
       display: none;
+
+      h1 {
+        color: #000;
+      }
+
     }
 
     li:first-child {
       display: block;
-      color: #000;
-      font-size: 18px;
+
     }
 
+  }
+
+  .page-product h1 {
+    display: block;
+    max-width: 200px;
   }
 
 }
