@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница личных контактов</title>
+    <title>Страница адресной книги</title>
     <link rel="stylesheet" href="css/custom-styles.css">
 </head>
 <body>
@@ -104,7 +104,7 @@
         <div class="catalog">
 
             <ul class="breadcrumbs">
-                <li><h1>Контактная информация</h1></li>
+                <li><h1>Адресная книга</h1></li>
                 <li><i class="fa fa-long-arrow-left"></i><a href="index.html">Личный кабинет</a></li>
                 <li><i class="fa fa-long-arrow-left"></i><a href="index.html">Главная</a></li>
             </ul>
@@ -194,83 +194,104 @@
         <div class="content">
             
             <div class="nav-cabinet">
-                <a>Контактная информация</a>
-                <a href="page-personal-address-book.html">Адресная книга</a>
+                <a href="page-personal-contacts.html">Контактная информация</a>
+                <a>Адресная книга</a>
                 <a href="page-personal-history.html">История заказов</a>
                 <a href="#">История посещений </a>
                 <a href="page-personal-partners-program.html">Партнерская программа</a>
             </div>
 
-            <form action="#" class="form-personal-contacts">
+            <form action="#" class="form-personal-address-book">
 
-                <div class="cabinet-item">
+                <div class="form-header">
 
-                    <h2>Вход в магазин</h2>
+                    <button type="submit">Сохранить по умолчанию »</button>
 
-                    <div class="form-required-note">* поля, обязательные для заполнения</div>
-
-                    <fieldset>
-                        <label for="personal-contact-1">Логин *</label>
-                        <input type="text" id="personal-contact-1" placeholder="admin">
-                    </fieldset>
-
-                    <fieldset>
-                        <label for="personal-contact-2">Пароль *</label>
-                        <input type="password" id="personal-contact-2" placeholder="**********">
-                    </fieldset>
-
-                    <fieldset>
-                        <label for="personal-contact-3">Подтвердите пароль *</label>
-                        <input type="password" id="personal-contact-3" placeholder="**********">
-                    </fieldset>
+                    <a href="#" class="add-new-address">Добавить новый адрес »</a>
 
                 </div>
 
-                <div class="cabinet-item">
+                <ul class="address-header">
+                    <li>По умолчанию</li>
+                    <li>Адрес доставки заказа</li>
+                    <li>Управление</li>
+                </ul>
 
-                    <h2>Общая информация</h2>
+                <ul class="address-list">
 
-                    <div class="form-required-note">* поля, обязательные для заполнения</div>
-
-                    <fieldset>
-                        <label for="personal-contact-4">Фамилия *</label>
-                        <input type="text" id="personal-contact-4" placeholder="Иванов">
-                    </fieldset>
-
-                    <fieldset>
-                        <label for="personal-contact-5">Имя *</label>
-                        <input type="text" id="personal-contact-5" placeholder="Степан">
-                    </fieldset>
-
-                    <fieldset>
-                        <label for="personal-contact-6">Отчество *</label>
-                        <input type="text" id="personal-contact-6" placeholder="Петрович">
-                    </fieldset>
-
-                    <fieldset>
-                        <label for="personal-contact-7">E-mail *</label>
-                        <input type="email" id="personal-contact-7" placeholder="mail@mail.ru">
-
-                        <input type="checkbox" id="personal-contact-8">
-                        <label for="personal-contact-8"><i class="fa fa-check"></i>Подписаться на новости</label>
-                    </fieldset>
-
-                    <fieldset>
-                        <label for="personal-contact-9">Телефон</label>
-
-                        <div>
-                            <input type="tel" id="personal-contact-9" placeholder="+79991234567">
-                            <span class="form-field-note">Вводите корректно ваш телефон, он нужен для получения информации о ходе ваших заказов</span>
+                    <li>
+                        <div class="address-default">
+                            <input type="radio" name="radio-address" id="radio-address-1" checked>
+                            <label for="radio-address-1"></label>
                         </div>
+                        <div class="address-value">190000, Россия, Московская область, г. Одинцово, ул. Красного Октября, д. 25, корпус 75, кв. 7</div>
+                        <div class="address-control">
+                            <button class="address-edit"><i class="fa fa-pencil"></i>Редактировать</button>
+                            <button class="address-remove"><i class="fa fa-close"></i>Удалить</button>
+                        </div>
+                    </li>
 
-                        <input type="checkbox" id="personal-contact-10">
-                        <label for="personal-contact-10"><i class="fa fa-check"></i>Не слать смс уведомление на телефон (проверка телефона не будет производиться)</label>
+                    <li>
+                        <div class="address-default">
+                            <input type="radio" name="radio-address" id="radio-address-2">
+                            <label for="radio-address-2"></label>
+                        </div>
+                        <div class="address-value">190000, Россия, Московская область, г. Одинцово, ул. Красного Октября, д. 25, корпус 75, кв. 7</div>
+                        <div class="address-control">
+                            <button class="address-edit"><i class="fa fa-pencil"></i>Редактировать</button>
+                            <button class="address-remove"><i class="fa fa-close"></i>Удалить</button>
+                        </div>
+                    </li>
 
-                    </fieldset>
+                    <li>
+                        <div class="address-default">
+                            <input type="radio" name="radio-address" id="radio-address-3">
+                            <label for="radio-address-3"></label>
+                        </div>
+                        <div class="address-value">190000, Россия, Московская область, г. Одинцово, ул. Красного Октября, д. 25, корпус 75, кв. 7</div>
+                        <div class="address-control">
+                            <button class="address-edit"><i class="fa fa-pencil"></i>Редактировать</button>
+                            <button class="address-remove"><i class="fa fa-close"></i>Удалить</button>
+                        </div>
+                    </li>
 
-                </div>
+                    <li>
+                        <div class="address-default">
+                            <input type="radio" name="radio-address" id="radio-address-4">
+                            <label for="radio-address-4"></label>
+                        </div>
+                        <div class="address-value">190000, Россия, Московская область, г. Одинцово, ул. Красного Октября, д. 25, корпус 75, кв. 7</div>
+                        <div class="address-control">
+                            <button class="address-edit"><i class="fa fa-pencil"></i>Редактировать</button>
+                            <button class="address-remove"><i class="fa fa-close"></i>Удалить</button>
+                        </div>
+                    </li>
 
-                <button type="submit">Сохранить »</button>
+                    <li>
+                        <div class="address-default">
+                            <input type="radio" name="radio-address" id="radio-address-5">
+                            <label for="radio-address-5"></label>
+                        </div>
+                        <div class="address-value">190000, Россия, Московская область, г. Одинцово, ул. Красного Октября, д. 25, корпус 75, кв. 7</div>
+                        <div class="address-control">
+                            <button class="address-edit"><i class="fa fa-pencil"></i>Редактировать</button>
+                            <button class="address-remove"><i class="fa fa-close"></i>Удалить</button>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="address-default">
+                            <input type="radio" name="radio-address" id="radio-address-6">
+                            <label for="radio-address-6"></label>
+                        </div>
+                        <div class="address-value">190000, Россия, Московская область, г. Одинцово, ул. Красного Октября, д. 25, корпус 75, кв. 7</div>
+                        <div class="address-control">
+                            <button class="address-edit"><i class="fa fa-pencil"></i>Редактировать</button>
+                            <button class="address-remove"><i class="fa fa-close"></i>Удалить</button>
+                        </div>
+                    </li>
+
+                </ul>
 
             </form>
 
