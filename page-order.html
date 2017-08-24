@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница обсуждения</title>
+    <title>Страница заказа</title>
     <link rel="stylesheet" href="css/custom-styles.css">
 </head>
 <body>
@@ -104,7 +104,7 @@
         <div class="catalog">
 
             <ul class="breadcrumbs">
-                <li><h1>Обсуждение товара</h1></li>
+                <li><h1>Оформление заказа</h1></li>
                 <li><i class="fa fa-long-arrow-left"></i><a href="index.html">Главная</a></li>
             </ul>
 
@@ -192,53 +192,149 @@
 
         <div class="content">
 
-            <div class="comment-product">
+            <form action="#" class="form-order">
 
-                <div class="comment-product-image"><img src="images/product-1.png" alt="product"></div>
+                <div class="order-item">
 
-                <h3><a href="page-product.html" class="comment-product-name">American Dream (10 семян)</a></h3>
+                    <h2>Персональные данные</h2>
 
-            </div>
+                    <div class="form-order-note">* поля, обязательные для заполнения</div>
 
-            <div class="comment-item">
+                    <fieldset class="fieldset-33">
+                        <label><input type="text" placeholder="Фамилия, имя, отчество *" required></label>
+                    </fieldset>
 
-                <div class="comment-item-name">Степан Иванов</div>
+                    <fieldset class="fieldset-33">
+                        <label><input type="tel" placeholder="Номер телефона *" required></label>
+                    </fieldset>
 
-                <div class="comment-item-text">Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%.</div>
+                    <fieldset class="fieldset-33">
+                        <input type="checkbox" id="order-checkbox-1">
+                        <label for="order-checkbox-1"><i class="fa fa-check"></i>Не слать смс уведомление на телефон (проверка телефона не будет производиться)</label>
+                    </fieldset>
 
-                <time>17.03.2017</time>
+                </div>
 
-            </div>
+                <div class="order-item">
 
-            <div class="comment-item">
+                    <h2>Адрес доставки заказа</h2>
 
-                <div class="comment-item-name">Степан Иванов</div>
+                    <div class="form-order-note">* поля, обязательные для заполнения</div>
 
-                <div class="comment-item-text">Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%.</div>
+                    <fieldset class="fieldset-33">
+                        <label><input type="text" placeholder="Улица/проспект/переулок *" required></label>
+                    </fieldset>
 
-                <time>17.03.2017</time>
+                    <fieldset class="fieldset-33 some-fields">
+                        <label><input type="text" placeholder="Дом *" required></label>
+                        <label><input type="text" placeholder="Корпус"></label>
+                        <label><input type="text" placeholder="Квартира"></label>
+                    </fieldset>
 
-            </div>
+                    <fieldset class="fieldset-33">
+                        <label><input type="text" placeholder="Область"></label>
+                    </fieldset>
 
-            <form action="#" class="form-comment">
+                    <fieldset class="fieldset-33">
+                        <label><input type="text" placeholder="Город"></label>
+                    </fieldset>
 
-                <div class="form-comment-title">Новое сообщение</div>
+                    <fieldset class="fieldset-33">
+                        <label><input type="text" placeholder="Почтовый индекс"></label>
+                    </fieldset>
 
-                <label><input type="text" placeholder="Тема сообщения"></label>
+                </div>
 
-                <label><textarea placeholder="Текст"></textarea></label>
+                <div class="order-item">
+
+                    <h2>Варианты доставки</h2>
+
+                    <fieldset class="fieldset-50">
+                        <input type="radio" name="radio-delivery" id="order-radio-1" checked>
+                        <label for="order-radio-1">
+                            <span class="radio-data">
+                                <span class="radio-title">Почта России (750 руб.)</span>
+                                <span class="radio-text">
+                                    Доставка 1 классом почтой России. Получить заказ Вы сможете в ближайшем почтовом отделении. Доставка почтой занимает 3-21 рабочих дней.
+                                </span>
+                            </span>
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="fieldset-50">
+                        <input type="radio" name="radio-delivery" id="order-radio-2">
+                        <label for="order-radio-2">
+                            <span class="radio-data">
+                                <span class="radio-title">Экспресс-доставка (1 500 руб.)</span>
+                                <span class="radio-text">
+                                    Получить заказ Вы сможете по указанному Вами адресу доставки. Экспресс доставка занимает от 1 до 7 дней, в зависимости от местоположения адресата.
+                                </span>
+                            </span>
+                        </label>
+                    </fieldset>
+
+                </div>
+
+                <div class="order-item">
+
+                    <h2>Варианты оплаты</h2>
+
+                    <fieldset class="fieldset-50">
+                        <input type="radio" name="radio-payment" id="order-radio-3" checked>
+                        <label for="order-radio-3">
+                            <span class="radio-data">
+                                <span class="radio-data">
+                                    <span class="radio-title">Яндекс.Деньги</span>
+                                    <span class="radio-text">
+                                        Оплата через электронную денежную систему Яндекс.Деньги (www.money.yandex.ru).
+                                    </span>
+                                </span>
+                            </span>
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="fieldset-50">
+                        <input type="radio" name="radio-payment" id="order-radio-4">
+                        <label for="order-radio-4">
+                            <span class="radio-data">
+                                <span class="radio-title">Webmoney</span>
+                                <span class="radio-text">
+                                    Оплата через электронную денежную систему webmoney (www.webmoney.ru). Самый быстрый способ оплатить ваш заказ.
+                                </span>
+                            </span>
+                        </label>
+                    </fieldset>
+
+                </div>
+
+                <div class="order-item">
+
+                    <fieldset class="fieldset-50">
+                        <label><textarea placeholder="Дополнительные комментарии"></textarea></label>
+                    </fieldset>
+
+                    <fieldset class="fieldset-50">
+                        <input type="checkbox" id="order-checkbox-2">
+                        <label for="order-checkbox-2">
+                            <i class="fa fa-check"></i>
+                            <span>Я ознакомился с <a href="#">соглашением сервиса</a> и согласен с условиями предоставления услуг.</span></label>
+                    </fieldset>
+
+                </div>
 
                 <div class="form-footer">
 
-                    <button type="submit">Добавить »</button>
+                    <button type="reset">Отменить заказ »</button>
 
-                    <button type="reset">Отменить »</button>
+                    <button type="submit">Оформить заказ »</button>
 
                 </div>
 
             </form>
 
         </div>
+
+
 
     </main>
 

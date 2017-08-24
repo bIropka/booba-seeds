@@ -1,0 +1,61 @@
+/*********************************************
+*********** form-footer
+**********************************************/
+
+.form-footer {
+  border-top: 1px solid #d2dfc6;
+  padding-top: 30px;
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  button {
+    border-radius: 8px;
+    padding: 16px 45px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  button[type='reset'] {
+    background: radial-gradient(circle closest-corner at 20px center, #68787c, #4d595c);
+    float: left;
+
+    &:hover {
+      background: radial-gradient(circle closest-corner at 20px center, #434343, #000);
+    }
+
+  }
+
+  button[type='submit'] {
+    float: right;
+    background: radial-gradient(circle closest-corner at 20px center, $color-green-light, $color-green-medium);
+
+    &:hover {
+      background: radial-gradient(circle closest-corner at 20px center, $color-orange-light, $color-orange);
+    }
+
+  }
+
+}
+
+@media(max-width: 480px) {
+
+  .form-footer {
+
+    button[type='submit'],
+    button[type='reset'] {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      float: none;
+      margin: 10px auto;
+    }
+
+  }
+
+}

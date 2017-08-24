@@ -292,6 +292,20 @@ nav a {
   padding: 30px 30px 45px;
 }
 
+h2,
+h3 {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  color: $color-green-dark;
+  clear: both;
+}
+
+h3 {
+  font-size: 16px;
+}
+
 article {
   padding: 25px 30px;
 }
@@ -367,6 +381,25 @@ input[type="checkbox"] + label {
   align-items: center;
   font-size: 14px;
   font-weight: 500;
+
+  span {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  a {
+    font-size: 14px;
+    color: $color-orange;
+    font-weight: 500;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+      color: $color-green-dark;
+    }
+
+  }
+
 }
 
 input[type="checkbox"] + label i {
@@ -380,6 +413,7 @@ input[type="checkbox"] + label i {
   color: transparent;
   background: #fff;
   margin: 0 10px 0 0;
+  flex-shrink: 0;
 }
 
 input[type="checkbox"]:checked + label i {
@@ -399,6 +433,24 @@ input[type="radio"] + label {
   position: relative;
 }
 
+input[type="radio"] + label .radio-data {
+  display: block;
+}
+
+input[type="radio"] + label .radio-title {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+input[type="radio"] + label .radio-text {
+  display: block;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 18px;
+}
+
 input[type="radio"] + label:before {
   content: '';
   display: block;
@@ -409,6 +461,7 @@ input[type="radio"] + label:before {
   color: transparent;
   background: #fff;
   margin: 0 10px 0 0;
+  flex-shrink: 0;
 }
 
 input[type="radio"]:checked + label:after {
@@ -418,7 +471,7 @@ input[type="radio"]:checked + label:after {
   height: 16px;
   border-radius: 50%;
   color: transparent;
-  background: $color-green-dark;
+  background: $color-green-medium;
   margin: auto;
   position: absolute;
   left: 5px;
@@ -448,6 +501,26 @@ input[type="radio"]:checked + label:after {
   &:hover {
     background: radial-gradient(circle closest-corner at 20px center, $color-orange-light, $color-orange);
     color: #fff;
+  }
+
+}
+
+.fieldset-33 {
+  width: calc(33.33333% - 14px);
+  margin: 10px 20px 10px 0;
+
+  &:nth-of-type(3n) {
+    margin: 10px 0;
+  }
+
+}
+
+.fieldset-50 {
+  width: calc(50% - 10px);
+  margin: 15px 20px 15px 0;
+
+  &:nth-of-type(2n) {
+    margin: 15px 0;
   }
 
 }
@@ -677,6 +750,39 @@ input[type="radio"]:checked + label:after {
 
     &:before {
       display: none;
+    }
+
+  }
+
+  .fieldset-33 {
+    width: calc(50% - 10px);
+    margin: 15px 20px 15px 0;
+
+    &:nth-of-type(2n) {
+      margin: 15px 0;
+    }
+
+    &:nth-of-type(3n) {
+      margin: 15px 20px 15px 0;
+    }
+
+  }
+
+  .fieldset-50 {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+}
+
+@media(max-width: 640px) {
+
+  .fieldset-33 {
+    width: 100%;
+    margin: 15px 0;
+
+    &:nth-of-type(3n) {
+      margin: 15px 0;
     }
 
   }
