@@ -494,6 +494,14 @@ input[type="radio"]:checked + label:after {
 
 @media(max-width: 768px) {
 
+  .content {
+    padding: 0 30px 45px;
+  }
+
+  .page-product .content {
+    padding: 30px 30px 45px;
+  }
+
   .header-burger {
     display: block;
     width: 40px;
@@ -671,6 +679,16 @@ input[type="radio"]:checked + label:after {
       display: none;
     }
 
+  }
+
+}
+
+@media(max-width: 480px) {
+
+  .content,
+  .page-product .content {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
 }
