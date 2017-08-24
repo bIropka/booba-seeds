@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница обсуждения</title>
+    <title>Страница истории заказов</title>
     <link rel="stylesheet" href="css/custom-styles.css">
 </head>
 <body>
@@ -104,7 +104,8 @@
         <div class="catalog">
 
             <ul class="breadcrumbs">
-                <li><h1>Обсуждение товара</h1></li>
+                <li><h1>История заказов</h1></li>
+                <li><i class="fa fa-long-arrow-left"></i><a href="index.html">Личный кабинет</a></li>
                 <li><i class="fa fa-long-arrow-left"></i><a href="index.html">Главная</a></li>
             </ul>
 
@@ -191,52 +192,114 @@
         </div>
 
         <div class="content">
+            
+            <div class="nav-cabinet">
+                <a href="page-personal-contacts.html">Контактная информация</a>
+                <a href="page-personal-address-book.html">Адресная книга</a>
+                <a>История заказов</a>
+                <a href="#">История посещений </a>
+                <a href="page-personal-partners-program.html">Партнерская программа</a>
+            </div>
 
-            <div class="comment-product">
+            <div class="table-history">
 
-                <div class="comment-product-image"><img src="images/product-1.png" alt="product"></div>
+                <table>
 
-                <h3><a href="page-product.html" class="comment-product-name">American Dream (10 семян)</a></h3>
+                    <tr>
+                        <th>№ заказа</th>
+                        <th>Дата заказа</th>
+                        <th>Статус</th>
+                        <th>Состав заказа</th>
+                        <th>Оплата</th>
+                        <th>Доставка</th>
+                        <th colspan="2">Стоимость</th>
+                    </tr>
+
+                    <tr>
+                        <td>1234567</td>
+                        <td><time>20.05.17, 20:15:17</time></td>
+                        <td>Ожидание оплаты</td>
+                        <td>Bleu Berries (10 семян), Automaria®
+                            (3 семя) Fem., Kaya 47 Auto (1 семя) Fem., Bleu Berries (10 семян), Automaria® (3 семя) Fem., Kaya 47 Auto (1 семя) Fem.
+                        </td>
+                        <td>
+                            Яндекс.Деньги
+                            <a href="#" class="to-pay">Оплатить</a>
+                            <a href="#" class="to-personal-pay">Оплатить с лицевого счета</a>
+                        </td>
+                        <td>Почта России <br>(17€)</td>
+                        <td>1557€</td>
+                        <td><a href="#" class="to-remove"><i class="fa fa-close"></i>Удалить</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>1234567</td>
+                        <td><time>20.05.17, 20:15:17</time></td>
+                        <td>Ожидание оплаты</td>
+                        <td>Bleu Berries (10 семян), Automaria®
+                            (3 семя) Fem., Kaya 47 Auto (1 семя) Fem., Bleu Berries (10 семян), Automaria® (3 семя) Fem., Kaya 47 Auto (1 семя) Fem.
+                        </td>
+                        <td>
+                            Яндекс.Деньги
+                            <a href="#" class="to-personal-pay">Оплатить с лицевого счета</a>
+                        </td>
+                        <td>Почта России <br>(17€)</td>
+                        <td>1557€</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>1234567</td>
+                        <td><time>20.05.17, 20:15:17</time></td>
+                        <td>Ожидание оплаты</td>
+                        <td>Bleu Berries (10 семян), Automaria®
+                            (3 семя) Fem., Kaya 47 Auto (1 семя) Fem., Bleu Berries (10 семян), Automaria® (3 семя) Fem., Kaya 47 Auto (1 семя) Fem.
+                        </td>
+                        <td>
+                            Яндекс.Деньги
+                            <a href="#" class="to-pay">Оплатить</a>
+                            <a href="#" class="to-personal-pay">Оплатить с лицевого счета</a>
+                        </td>
+                        <td>Почта России <br>(17€)</td>
+                        <td>1557€</td>
+                        <td><a href="#" class="to-remove"><i class="fa fa-close"></i>Удалить</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>1234567</td>
+                        <td><time>20.05.17, 20:15:17</time></td>
+                        <td>Ожидание оплаты</td>
+                        <td>Bleu Berries (10 семян), Automaria®
+                            (3 семя) Fem., Kaya 47 Auto (1 семя) Fem., Bleu Berries (10 семян), Automaria® (3 семя) Fem., Kaya 47 Auto (1 семя) Fem.
+                        </td>
+                        <td>
+                            Яндекс.Деньги
+                            <a href="#" class="to-personal-pay">Оплатить с лицевого счета</a>
+                        </td>
+                        <td>Почта России <br>(17€)</td>
+                        <td>1557€</td>
+                        <td></td>
+                    </tr>
+
+                </table>
 
             </div>
 
-            <div class="comment-item">
-
-                <div class="comment-item-name">Степан Иванов</div>
-
-                <div class="comment-item-text">Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%.</div>
-
-                <time>17.03.2017</time>
-
+            <div class="nav-pages">
+                <span>Страницы: </span>
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#" class="active">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                </ul>
             </div>
-
-            <div class="comment-item">
-
-                <div class="comment-item-name">Степан Иванов</div>
-
-                <div class="comment-item-text">Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%. Делаем скидки на некоторые товарные позиции: скидки до 50%.</div>
-
-                <time>17.03.2017</time>
-
-            </div>
-
-            <form action="#" class="form-comment">
-
-                <div class="form-comment-title">Новое сообщение</div>
-
-                <label><input type="text" placeholder="Тема сообщения"></label>
-
-                <label><textarea placeholder="Текст"></textarea></label>
-
-                <div class="form-footer">
-
-                    <button type="submit">Добавить »</button>
-
-                    <button type="reset">Отменить »</button>
-
-                </div>
-
-            </form>
 
         </div>
 

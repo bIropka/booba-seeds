@@ -172,12 +172,16 @@
     font-weight: 500;
     text-decoration: none;
     margin-right: 10px;
+    cursor: default;
 
     &[href] {
       color: $color-orange;
+      text-decoration: underline;
+      cursor: pointer;
 
       &:hover {
         color: $color-green-dark;
+        text-decoration: none;
       }
 
     }
@@ -343,6 +347,109 @@
     color: #c70808;
     margin-right: 5px;
     font-size: 14px;
+  }
+
+}
+
+.table-history {
+  width: 100%;
+  overflow: auto;
+  margin: 30px 0;
+
+  table {
+    min-width: 800px;
+    border-collapse: collapse;
+  }
+
+  th {
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid #c6cacc;
+  }
+
+  td {
+    padding: 10px 15px 10px 0;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #e7e8e7;
+
+    &:nth-of-type(1) {
+      width: 9%;
+    }
+
+    &:nth-of-type(2) {
+      width: 12%;
+    }
+
+    &:nth-of-type(3) {
+      width: 10%;
+    }
+
+    &:nth-of-type(4) {
+      width: 30%;
+    }
+
+    &:nth-of-type(5) {
+      width: 12%;
+    }
+
+    &:nth-of-type(6) {
+      width: 9%;
+    }
+
+    &:nth-of-type(7) {
+      width: 9%;
+    }
+
+    &:nth-of-type(8) {
+      width: 9%;
+    }
+
+  }
+
+  a {
+    display: block;
+    text-decoration: underline;
+    font-size: 12px;
+    margin: 5px 0;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+  }
+
+  .to-pay {
+    color: $color-green-dark;
+  }
+
+  .to-personal-pay {
+    color: #005983;
+  }
+
+  .to-remove {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+
+    i {
+      font-size: 14px;
+      margin-right: 5px;
+      color: #c70808;
+    }
+
+    &:hover {
+      color: $color-green-dark;
+
+      i {
+        color: inherit;
+      }
+
+    }
+
   }
 
 }
