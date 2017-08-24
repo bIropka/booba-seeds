@@ -5401,7 +5401,7 @@ footer {
 .page-inner .catalog {
   position: relative;
   justify-content: space-between;
-  padding: 0 20px; }
+  padding: 0 30px; }
 .page-inner .catalog-item {
   display: none;
   padding: 20px;
@@ -6066,7 +6066,7 @@ footer {
 **********************************************/
 .breadcrumbs {
   position: absolute;
-  left: 20px;
+  left: 30px;
   top: 17px;
   bottom: 0;
   margin: auto; }
@@ -7338,7 +7338,9 @@ blockquote {
   .order-item input[type="checkbox"] + label {
     align-items: flex-start; }
 
-.form-order-note {
+.form-required-note {
+  font-size: 14px;
+  font-style: italic;
   position: absolute;
   top: 0;
   right: 0; }
@@ -7359,7 +7361,7 @@ fieldset.some-fields label {
   h2 {
     text-align: center; }
 
-  .form-order-note {
+  .form-required-note {
     width: 100%;
     text-align: center;
     position: static; } }
@@ -7374,16 +7376,24 @@ fieldset.some-fields label {
   align-content: stretch;
   flex-wrap: wrap;
   font-size: 14px; }
+  .cabinet-list .cabinet-item {
+    padding: 30px 30px 30px 0;
+    width: 50%;
+    margin: 0; }
+    .cabinet-list .cabinet-item:nth-of-type(1), .cabinet-list .cabinet-item:nth-of-type(2) {
+      padding-top: 0; }
+    .cabinet-list .cabinet-item:last-of-type {
+      padding-bottom: 0;
+      border-bottom: none; }
 
 .cabinet-item {
-  padding: 30px 30px 30px 0;
+  position: relative;
   border-bottom: 1px solid #e7e8e7;
-  width: 50%; }
-  .cabinet-item:nth-of-type(1), .cabinet-item:nth-of-type(2) {
-    padding-top: 0; }
-  .cabinet-item:last-of-type {
-    padding-bottom: 0;
-    border-bottom: none; }
+  padding-bottom: 30px;
+  width: 100%;
+  margin-top: 20px; }
+  .cabinet-item h2 {
+    margin-bottom: 20px; }
   .cabinet-item h3 {
     margin: 0 0 15px; }
     .cabinet-item h3 a {
@@ -7430,12 +7440,100 @@ fieldset.some-fields label {
       padding: 5px 0; }
     .cabinet-item table td:first-of-type {
       padding-right: 40px; }
+  .cabinet-item fieldset {
+    margin-bottom: 20px; }
+    .cabinet-item fieldset:last-of-type {
+      margin: 0; }
+    .cabinet-item fieldset label {
+      float: left;
+      padding: 0 0 0 15px;
+      width: 40%; }
+    .cabinet-item fieldset label:first-of-type {
+      width: 25%;
+      padding: 10px 15px 0 0;
+      font-size: 14px;
+      font-weight: 500; }
+    .cabinet-item fieldset label:first-of-type + input {
+      width: 35%;
+      height: 36px;
+      float: left; }
+    .cabinet-item fieldset label:first-of-type + div {
+      width: 35%;
+      float: left; }
+    .cabinet-item fieldset input[type="checkbox"] + label {
+      align-items: flex-start; }
+    .cabinet-item fieldset:after {
+      content: '';
+      display: block;
+      clear: both; }
+
+.nav-cabinet {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  .nav-cabinet a {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 10px; }
+    .nav-cabinet a[href] {
+      color: #e86d32; }
+      .nav-cabinet a[href]:hover {
+        color: #3a7702; }
+
+.form-field-note {
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 16px;
+  margin-top: 10px; }
+
+.form-personal-contacts button[type="submit"] {
+  margin-top: 30px;
+  border-radius: 8px;
+  padding: 16px 20px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  background: radial-gradient(circle closest-corner at 20px center, #9cb620, #7ea01b); }
+  .form-personal-contacts button[type="submit"]:hover {
+    background: radial-gradient(circle closest-corner at 20px center, #ef8f42, #e86d32); }
 
 @media (max-width: 768px) {
-  .cabinet-item {
+  .cabinet-item:first-of-type {
     padding: 15px 0 !important;
     border-bottom: none !important;
-    width: 100%; } }
+    width: 100%; }
+
+  .cabinet-item fieldset input[type="checkbox"] + label {
+    align-items: center; }
+  .cabinet-item fieldset label,
+  .cabinet-item fieldset label:first-of-type {
+    padding: 0; }
+  .cabinet-item fieldset label,
+  .cabinet-item fieldset label:first-of-type,
+  .cabinet-item fieldset label:first-of-type + input,
+  .cabinet-item fieldset label:first-of-type + div {
+    width: 100%;
+    float: none;
+    margin: 10px 0; }
+
+  .nav-cabinet {
+    flex-wrap: wrap;
+    justify-content: center; }
+    .nav-cabinet a {
+      font-size: 16px;
+      margin: 5px 10px; }
+
+  .form-personal-contacts h2 {
+    text-align: center;
+    margin: 0; }
+  .form-personal-contacts .form-required-note {
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 20px; } }
 @media (max-width: 480px) {
   .cabinet-item table {
     width: 100%; }

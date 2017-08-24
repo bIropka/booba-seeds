@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница заказа</title>
+    <title>Страница обсуждения</title>
     <link rel="stylesheet" href="css/custom-styles.css">
 </head>
 <body>
@@ -104,7 +104,8 @@
         <div class="catalog">
 
             <ul class="breadcrumbs">
-                <li><h1>Оформление заказа</h1></li>
+                <li><h1>Контактная информация</h1></li>
+                <li><i class="fa fa-long-arrow-left"></i><a href="index.html">Личный кабинет</a></li>
                 <li><i class="fa fa-long-arrow-left"></i><a href="index.html">Главная</a></li>
             </ul>
 
@@ -191,150 +192,89 @@
         </div>
 
         <div class="content">
+            
+            <div class="nav-cabinet">
+                <a>Контактная информация</a>
+                <a href="page-personal-address-book.html">Адресная книга</a>
+                <a href="page-personal-history.html">История заказов</a>
+                <a href="#">История посещений </a>
+                <a href="page-personal-partners-program.html">Партнерская программа</a>
+            </div>
 
-            <form action="#" class="form-order">
+            <form action="#" class="form-personal-contacts">
 
-                <div class="order-item">
+                <div class="cabinet-item">
 
-                    <h2>Персональные данные</h2>
-
-                    <div class="form-required-note">* поля, обязательные для заполнения</div>
-
-                    <fieldset class="fieldset-33">
-                        <label><input type="text" placeholder="Фамилия, имя, отчество *" required></label>
-                    </fieldset>
-
-                    <fieldset class="fieldset-33">
-                        <label><input type="tel" placeholder="Номер телефона *" required></label>
-                    </fieldset>
-
-                    <fieldset class="fieldset-33">
-                        <input type="checkbox" id="order-checkbox-1">
-                        <label for="order-checkbox-1"><i class="fa fa-check"></i>Не слать смс уведомление на телефон (проверка телефона не будет производиться)</label>
-                    </fieldset>
-
-                </div>
-
-                <div class="order-item">
-
-                    <h2>Адрес доставки заказа</h2>
+                    <h2>Вход в магазин</h2>
 
                     <div class="form-required-note">* поля, обязательные для заполнения</div>
 
-                    <fieldset class="fieldset-33">
-                        <label><input type="text" placeholder="Улица/проспект/переулок *" required></label>
+                    <fieldset>
+                        <label for="personal-contact-1">Логин *</label>
+                        <input type="text" id="personal-contact-1" placeholder="admin">
                     </fieldset>
 
-                    <fieldset class="fieldset-33 some-fields">
-                        <label><input type="text" placeholder="Дом *" required></label>
-                        <label><input type="text" placeholder="Корпус"></label>
-                        <label><input type="text" placeholder="Квартира"></label>
+                    <fieldset>
+                        <label for="personal-contact-2">Пароль *</label>
+                        <input type="password" id="personal-contact-2" placeholder="**********">
                     </fieldset>
 
-                    <fieldset class="fieldset-33">
-                        <label><input type="text" placeholder="Область"></label>
-                    </fieldset>
-
-                    <fieldset class="fieldset-33">
-                        <label><input type="text" placeholder="Город"></label>
-                    </fieldset>
-
-                    <fieldset class="fieldset-33">
-                        <label><input type="text" placeholder="Почтовый индекс"></label>
+                    <fieldset>
+                        <label for="personal-contact-3">Подтвердите пароль *</label>
+                        <input type="password" id="personal-contact-3" placeholder="**********">
                     </fieldset>
 
                 </div>
 
-                <div class="order-item">
+                <div class="cabinet-item">
 
-                    <h2>Варианты доставки</h2>
+                    <h2>Общая информация</h2>
 
-                    <fieldset class="fieldset-50">
-                        <input type="radio" name="radio-delivery" id="order-radio-1" checked>
-                        <label for="order-radio-1">
-                            <span class="radio-data">
-                                <span class="radio-title">Почта России (750 руб.)</span>
-                                <span class="radio-text">
-                                    Доставка 1 классом почтой России. Получить заказ Вы сможете в ближайшем почтовом отделении. Доставка почтой занимает 3-21 рабочих дней.
-                                </span>
-                            </span>
-                        </label>
+                    <div class="form-required-note">* поля, обязательные для заполнения</div>
+
+                    <fieldset>
+                        <label for="personal-contact-4">Фамилия *</label>
+                        <input type="text" id="personal-contact-4" placeholder="Иванов">
                     </fieldset>
 
-                    <fieldset class="fieldset-50">
-                        <input type="radio" name="radio-delivery" id="order-radio-2">
-                        <label for="order-radio-2">
-                            <span class="radio-data">
-                                <span class="radio-title">Экспресс-доставка (1 500 руб.)</span>
-                                <span class="radio-text">
-                                    Получить заказ Вы сможете по указанному Вами адресу доставки. Экспресс доставка занимает от 1 до 7 дней, в зависимости от местоположения адресата.
-                                </span>
-                            </span>
-                        </label>
+                    <fieldset>
+                        <label for="personal-contact-5">Имя *</label>
+                        <input type="text" id="personal-contact-5" placeholder="Степан">
                     </fieldset>
 
-                </div>
-
-                <div class="order-item">
-
-                    <h2>Варианты оплаты</h2>
-
-                    <fieldset class="fieldset-50">
-                        <input type="radio" name="radio-payment" id="order-radio-3" checked>
-                        <label for="order-radio-3">
-                            <span class="radio-data">
-                                <span class="radio-data">
-                                    <span class="radio-title">Яндекс.Деньги</span>
-                                    <span class="radio-text">
-                                        Оплата через электронную денежную систему Яндекс.Деньги (www.money.yandex.ru).
-                                    </span>
-                                </span>
-                            </span>
-                        </label>
+                    <fieldset>
+                        <label for="personal-contact-6">Отчество *</label>
+                        <input type="text" id="personal-contact-6" placeholder="Петрович">
                     </fieldset>
 
-                    <fieldset class="fieldset-50">
-                        <input type="radio" name="radio-payment" id="order-radio-4">
-                        <label for="order-radio-4">
-                            <span class="radio-data">
-                                <span class="radio-title">Webmoney</span>
-                                <span class="radio-text">
-                                    Оплата через электронную денежную систему webmoney (www.webmoney.ru). Самый быстрый способ оплатить ваш заказ.
-                                </span>
-                            </span>
-                        </label>
+                    <fieldset>
+                        <label for="personal-contact-7">E-mail *</label>
+                        <input type="email" id="personal-contact-7" placeholder="mail@mail.ru">
+
+                        <input type="checkbox" id="personal-contact-8">
+                        <label for="personal-contact-8"><i class="fa fa-check"></i>Подписаться на новости</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="personal-contact-9">Телефон</label>
+
+                        <div>
+                            <input type="tel" id="personal-contact-9" placeholder="+79991234567">
+                            <span class="form-field-note">Вводите корректно ваш телефон, он нужен для получения информации о ходе ваших заказов</span>
+                        </div>
+
+                        <input type="checkbox" id="personal-contact-10">
+                        <label for="personal-contact-10"><i class="fa fa-check"></i>Не слать смс уведомление на телефон (проверка телефона не будет производиться)</label>
+
                     </fieldset>
 
                 </div>
 
-                <div class="order-item">
-
-                    <fieldset class="fieldset-50">
-                        <label><textarea placeholder="Дополнительные комментарии"></textarea></label>
-                    </fieldset>
-
-                    <fieldset class="fieldset-50">
-                        <input type="checkbox" id="order-checkbox-2">
-                        <label for="order-checkbox-2">
-                            <i class="fa fa-check"></i>
-                            <span>Я ознакомился с <a href="#">соглашением сервиса</a> и согласен с условиями предоставления услуг.</span></label>
-                    </fieldset>
-
-                </div>
-
-                <div class="form-footer">
-
-                    <button type="reset">Отменить заказ »</button>
-
-                    <button type="submit">Оформить заказ »</button>
-
-                </div>
+                <button type="submit">Сохранить »</button>
 
             </form>
 
         </div>
-
-
 
     </main>
 
