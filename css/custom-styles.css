@@ -7433,6 +7433,9 @@ fieldset.some-fields label {
   .cabinet-item p {
     margin: 10px 0;
     font-size: 14px; }
+    .cabinet-item p strong {
+      font-size: inherit;
+      font-weight: 500; }
   .cabinet-item table {
     border-collapse: collapse;
     border: none; }
