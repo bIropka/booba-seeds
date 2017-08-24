@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница корзины</title>
+    <title>Страница личного кабинета</title>
     <link rel="stylesheet" href="css/custom-styles.css">
 </head>
 <body>
@@ -104,7 +104,7 @@
         <div class="catalog">
 
             <ul class="breadcrumbs">
-                <li><h1>Корзина</h1></li>
+                <li><h1>Личный кабинет</h1></li>
                 <li><i class="fa fa-long-arrow-left"></i><a href="index.html">Главная</a></li>
             </ul>
 
@@ -192,128 +192,109 @@
 
         <div class="content">
 
-            <form action="#" class="form-cart">
+            <div class="cabinet-list">
 
-                <ul class="cart-header">
-                    <li>Изображение</li>
-                    <li>Название</li>
-                    <li>Количество, пачек</li>
-                    <li>Стоимость</li>
-                    <li><a href="#" class="cart-remove-all"><i class="fa fa-close"></i>Очистить все</a></li>
-                </ul>
+                <div class="cabinet-item">
 
-                <div class="cart-list">
+                    <h3><a href="page-personal-history.html">История заказов</a></h3>
 
-                    <div class="cart-item">
-
-                        <div class="cart-item-image">
-                            <div class="image-wrap">
-                                <img src="images/product-1.png" alt="product">
-                            </div>
-                        </div>
-
-                        <div class="cart-item-inner">
-
-                            <div class="cart-item-name">American Dream (10 семян)</div>
-
-                            <div class="cart-item-amount">
-                                <label>
-                                    <input type="text" value="2">
-                                    <span>(2 шт.)</span>
-                                </label>
-                            </div>
-
-                        </div>
-
-                        <div class="cart-item-cost">7 500 руб.</div>
-
-                        <div class="cart-item-remove"><a href="#"><i class="fa fa-close"></i></a></div>
-
-                    </div>
-
-                    <div class="cart-item">
-
-                        <div class="cart-item-image">
-                            <div class="image-wrap">
-                                <img src="images/product-1.png" alt="product">
-                            </div>
-                        </div>
-
-                        <div class="cart-item-inner">
-
-                            <div class="cart-item-name">American Dream (10 семян)</div>
-
-                            <div class="cart-item-amount">
-                                <label>
-                                    <input type="text" value="2">
-                                    <span>(2 шт.)</span>
-                                </label>
-                            </div>
-
-                        </div>
-
-                        <div class="cart-item-cost">7 500 руб.</div>
-
-                        <div class="cart-item-remove"><a href="#"><i class="fa fa-close"></i></a></div>
-
-                    </div>
-
-                    <div class="cart-item">
-
-                        <div class="cart-item-image">
-                            <div class="image-wrap">
-                                <img src="images/product-1.png" alt="product">
-                            </div>
-                        </div>
-
-                        <div class="cart-item-inner">
-
-                            <div class="cart-item-name">American Dream (10 семян)</div>
-
-                            <div class="cart-item-amount">
-                                <label>
-                                    <input type="text" value="2">
-                                    <span>(2 шт.)</span>
-                                </label>
-                            </div>
-
-                        </div>
-
-                        <div class="cart-item-cost">7 500 руб.</div>
-
-                        <div class="cart-item-remove"><a href="#"><i class="fa fa-close"></i></a></div>
-
-                    </div>
+                    <ul>
+                        <li><a href="#">Заказ № 789</a> от 27.05.2017 на 7 товаров на сумму 25 257 руб.</li>
+                        <li><a href="#">Заказ № 788</a> от 25.05.2017 на 3 товара на сумму 7 500 руб.</li>
+                        <li><a href="#">Заказ № 787</a> от 20.05.2017 на 5 товаров на сумму 10 700 руб.</li>
+                    </ul>
 
                 </div>
 
-                <div class="cart-result">
+                <div class="cabinet-item">
 
-                    <div class="cart-discount">
-                        Скидка
-                        <span class="cart-discount-percent">(1%)</span>:
-                        <span class="cart-discount-money"> 57 руб.</span>
-                    </div>
+                    <h3><a href="page-personal-account.html">Лицевой счет</a></h3>
 
-                    <div class="cart-summa">Итого: 7 597 руб.</div>
+                    <p>На лицевом счету: 1 000 руб. <a href="#">Пополнить</a></p>
 
                 </div>
 
-                <div class="cart-footer">
+                <div class="cabinet-item">
 
-                    <a href="page-catalog.html" class="cart-to-catalog">Вернуться к покупкам »</a>
+                    <h3><a href="page-personal-contacts.html">Контактная информация</a></h3>
 
-                    <fieldset>
+                    <table>
 
-                        <a href="#" class="cart-to-payment">Оплатить с лицевого счета »</a>
+                        <tr>
+                            <td>Фамилия</td>
+                            <td>Степанов</td>
+                        </tr>
 
-                        <button type="submit">Оформить заказ »</button>
+                        <tr>
+                            <td>Имя</td>
+                            <td>Иван</td>
+                        </tr>
 
-                    </fieldset>
+                        <tr>
+                            <td>Отчество</td>
+                            <td>Петрович</td>
+                        </tr>
+
+                        <tr>
+                            <td>Email</td>
+                            <td>stepanov@mail.ru</td>
+                        </tr>
+
+                        <tr>
+                            <td>Логин</td>
+                            <td>stepanov</td>
+                        </tr>
+
+                        <tr>
+                            <td>Скидка</td>
+                            <td>7%</td>
+                        </tr>
+
+                        <tr>
+                            <td>Заказов на сумму</td>
+                            <td>250</td>
+                        </tr>
+
+                    </table>
+
+                    <p><a href="#">Изменить контактную информацию</a></p>
 
                 </div>
 
-            </form>
+                <div class="cabinet-item">
+
+                    <h3><a href="page-personal-address-book.html">Адресная книга</a></h3>
+
+                    <table>
+
+                        <tr>
+                            <td>Адрес по умолчанию</td>
+                            <td>190000, Москва, ул. Ленина, д.25, кв. 7</td>
+                        </tr>
+
+                    </table>
+
+                    <p><a href="#">Просмотр <br>и редактирование адресов</a></p>
+
+                </div>
+
+                <div class="cabinet-item">
+
+                    <h3><a href="page-personal-partners-program.html">Партнерская программа</a></h3>
+
+                    <p>Привлеченных покупателей нет</p>
+
+                    <ul>
+                        <li><a href="#">Баланс</a></li>
+                        <li><a href="#">История выплат</a></li>
+                        <li><a href="#">Как заработать деньги на партнерской программе</a></li>
+                    </ul>
+
+                    <p><a href="#">Настройки</a></p>
+
+                </div>
+
+            </div>
 
         </div>
 
