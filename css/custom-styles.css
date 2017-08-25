@@ -4793,7 +4793,8 @@ header {
     border: none; }
   .form-sign-in .to-sign-up {
     color: #000;
-    text-decoration: underline; }
+    text-decoration: underline;
+    cursor: pointer; }
     .form-sign-in .to-sign-up:hover {
       text-decoration: none; }
   .form-sign-in label {
@@ -5244,6 +5245,92 @@ footer {
   .footer-copyright,
   .footer-offerta {
     width: 100%; } }
+/*******************************************************************************
+********* modal
+*******************************************************************************/
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.57);
+  text-align: left;
+  z-index: 1002;
+  overflow: auto;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0; }
+
+.modal-inner {
+  width: 100%;
+  max-width: 360px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px 30px 30px;
+  position: relative; }
+  .modal-inner .form-required-note {
+    position: static; }
+  .modal-inner label {
+    display: block;
+    margin: 22px 0; }
+  .modal-inner .captcha-wrap {
+    display: flex;
+    align-items: flex-end;
+    margin: 22px 0; }
+  .modal-inner .captcha-label {
+    margin: 0 15px 0 0; }
+    .modal-inner .captcha-label input {
+      margin-top: 5px; }
+  .modal-inner .captcha {
+    height: 36px;
+    width: auto; }
+    .modal-inner .captcha img {
+      height: 100%;
+      width: auto; }
+  .modal-inner input {
+    background: #eceeeb; }
+  .modal-inner input[type="checkbox"] + label {
+    align-items: flex-start; }
+  .modal-inner button[type='submit'] {
+    display: block;
+    width: 100%;
+    background: radial-gradient(circle closest-corner at 20px center, #9cb620, #7ea01b);
+    border-radius: 8px;
+    padding: 16px 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500; }
+    .modal-inner button[type='submit']:hover {
+      background: radial-gradient(circle closest-corner at 20px center, #ef8f42, #e86d32); }
+
+.close-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 39px;
+  background: url(../images/icon-background-orange.png) no-repeat center;
+  position: absolute;
+  color: #fff;
+  font-size: 18px;
+  top: -20px;
+  right: 20px;
+  cursor: pointer; }
+  .close-modal:hover {
+    background: url(../images/icon-background-green.png) no-repeat center;
+    color: #000; }
+
+@media (max-width: 980px) {
+  .modal {
+    align-items: flex-start; }
+
+  .close-modal {
+    top: 10px; } }
+@media (max-width: 360px) {
+  .modal-inner {
+    border-radius: 0; } }
 /* page-main */
 /*********************************************
 *********** catalog

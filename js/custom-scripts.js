@@ -127,6 +127,20 @@ $(window).ready(function() {
         }
     });
 
+    /***********************/
+    /* modal scripts */
+    /***********************/
+
+    $('.to-sign-up').click(function() {
+        $('.modal-reg').fadeIn().css('display', 'flex');
+    });
+
+    $('.modal').click(function (event) {
+        $target = $(event.target);
+        if (!$target.closest($('.modal-inner')).length) $('.modal').fadeOut();
+        if ($target.hasClass('close-modal')) $('.modal').fadeOut();
+    });
+
     $('.slider-banner').slick({
         slidesToShow: 3,
         slidesToScroll: 3,

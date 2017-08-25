@@ -75,7 +75,7 @@
             <form action="#" class="form-sign-in">
 
                 <span>Войдите или </span>
-                <button class="to-sign-up">зарегистрируйтесь</button>
+                <span class="to-sign-up">зарегистрируйтесь</span>
 
                 <fieldset>
 
@@ -84,7 +84,7 @@
                     </label>
 
                     <label>
-                        <span class="form-required-note">?</span>
+                        <span class="form-note">?</span>
                         <input type="password" placeholder="Пароль">
                     </label>
 
@@ -1316,10 +1316,46 @@
 
 </div>
 
+<div class="modal modal-reg">
+
+    <form action="#" class="modal-inner">
+
+        <i class="fa fa-close close-modal"></i>
+
+        <h2>Регистрация</h2>
+
+        <label><input type="text" placeholder="Логин *"></label>
+
+        <label><input type="password" placeholder="Пароль *"></label>
+
+        <label><input type="password" placeholder="Повторите пароль *"></label>
+
+        <label><input type="email" placeholder="E-mail *"></label>
+
+        <div class="captcha-wrap">
+
+            <label class="captcha-label">Код подтверждения *<input type="text" id="captcha"></label>
+            
+            <div class="captcha"><img src="images/captcha.jpg" alt="captcha"></div>
+
+        </div>
+
+        <div class="form-required-note">* поля, обязательные для заполнения</div>
+
+        <input type="checkbox" id="modal-checkbox">
+        <label for="modal-checkbox">
+            <i class="fa fa-check"></i>
+            <span>Я ознакомился с <a href="#">соглашением сервиса</a> и согласен с условиями пре&shy;до&shy;ста&shy;вле&shy;ния услуг.</span>
+        </label>
+
+        <button type="submit">Зарегистрироваться »</button>
+
+    </form>
+
+</div>
+
 <script src="libs/jquery-3.2.1.min.js"></script>
 <script src="libs/slick-1.6.0/slick.min.js"></script>
-<script src="libs/scrollPane/mwheelIntent.js"></script>
-<script src="libs/scrollPane/jquery.jscrollpane.min.js"></script>
 <script src="js/custom-scripts.js"></script>
 </body>
 </html>
