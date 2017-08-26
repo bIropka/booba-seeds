@@ -221,6 +221,12 @@
 
   }
 
+  .catalog-list {
+    display: none;
+    text-align: justify;
+    font-size: 0;
+  }
+
   .catalog-burger-hidden,
   .catalog-burger-visible {
     font-weight: 500;
@@ -245,9 +251,10 @@
   }
 
   .catalog-item {
-    display: flex;
+    display: inline-flex;
     padding: 20px;
     width: 20%;
+    max-width: none;
 
     i {
       font-size: 49px;
@@ -278,9 +285,13 @@
       justify-content: center;
     }
 
+    .catalog-list {
+      text-align: center;
+    }
+
     .catalog-item {
-      width: 100%;
-      max-width: 250px;
+      width: 250px;
+      max-width: none;
     }
 
   }
