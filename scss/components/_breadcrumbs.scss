@@ -3,11 +3,7 @@
 **********************************************/
 
 .breadcrumbs {
-  position: absolute;
-  left: 30px;
-  top: 17px;
-  bottom: 0;
-  margin: auto;
+  width: calc(100% - 320px);
 
   li {
     display: inline-block;
@@ -69,15 +65,18 @@
 @media(max-width: 768px) {
 
   .breadcrumbs {
+    position: absolute;
+    margin: auto;
     left: 30px;
     top: calc(100% + 25px);
-    bottom: auto;
 
     li {
       display: none;
 
       h1 {
+        width: 100%;
         color: #000;
+        text-align: inherit;
       }
 
     }
@@ -92,6 +91,14 @@
   .page-product h1 {
     display: block;
     max-width: 200px;
+  }
+
+}
+
+@media(max-width: 640px) {
+
+  .page-product h1 {
+    max-width: none;
   }
 
 }

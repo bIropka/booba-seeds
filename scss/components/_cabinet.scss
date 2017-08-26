@@ -462,12 +462,6 @@
 
 @media(max-width: 768px) {
 
-  .cabinet-item:first-of-type {
-    padding: 15px 0!important;
-    border-bottom: none!important;
-    width: 100%;
-  }
-
   .cabinet-item {
 
     fieldset {
@@ -550,6 +544,18 @@
 
   .address-control {
     width: 100%;
+  }
+
+  .cabinet-list .cabinet-item {
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: none;
+
+    &:nth-of-type(1),
+    &:nth-of-type(2) {
+      padding: 15px 0;
+    }
+
   }
 
 }

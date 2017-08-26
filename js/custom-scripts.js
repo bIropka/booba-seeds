@@ -1,6 +1,8 @@
 $(window).ready(function() {
 
+
     setTimeout(function() {
+        $('aside').addClass('unactive');
         $('.preloader').fadeOut(500);
     }, 500);
 
@@ -15,11 +17,14 @@ $(window).ready(function() {
     if($(window).width() < 641) {
         $('.product-item-forum').insertAfter('.product-item-rate');
         $('.product-item-header').insertAfter('.product-item-cost');
+        $('.page-main .catalog-list').css('display', 'none');
     } else if($(window).width() < 769) {
         $('.form-search').appendTo('header nav');
         $('.product-item-forum').prependTo('.product-item-cost');
         $('.product-item-header').prependTo('.product-item');
+        $('.page-main .catalog-list').css('display', 'none');
     } else {
+        $('.page-main .catalog-list').css('display', 'flex');
         $('.form-search').insertAfter('.header-logo');
         $('.product-item-forum').insertAfter('.product-item-rate');
     }
@@ -29,11 +34,14 @@ $(window).ready(function() {
         if($(window).width() < 641) {
             $('.product-item-forum').insertAfter('.product-item-rate');
             $('.product-item-header').insertAfter('.product-item-cost');
+            $('.page-main .catalog-list').css('display', 'none');
         } else if($(window).width() < 769) {
             $('.form-search').appendTo('header nav');
             $('.product-item-forum').prependTo('.product-item-cost');
             $('.product-item-header').prependTo('.product-item');
+            $('.page-main .catalog-list').css('display', 'none');
         } else {
+            $('.page-main .catalog-list').css('display', 'flex');
             $('.form-search').insertAfter('.header-logo');
             $('.product-item-forum').insertAfter('.product-item-rate');
         }
@@ -97,10 +105,11 @@ $(window).ready(function() {
 
     $('.catalog-burger').click(function() {
         $(this).parents('.catalog').toggleClass('active');
+        $(this).siblings('.catalog-list').slideToggle();
     });
 
     $('.aside-burger').click(function() {
-        $(this).parents('aside').toggleClass('active');
+        $(this).parents('aside').toggleClass('unactive');
     });
 
     $('.products-main-prev').click(function() {
@@ -206,36 +215,6 @@ $(window).ready(function() {
                 }
             }
         ]
-    });
-
-    /***********************/
-   /* filter-cost scripts */
-  /***********************/
-
-    var filterCost = $("#filter-cost-item");
-    var minCost = $('#min-cost');
-    var maxCost = $('#max-cost');
-
-    filterCost.rangeSlider({
-        bounds:{min: 0, max: 5000},
-        defaultValues:{min: 500 , max: 2700},
-        step: 50
-    });
-
-    filterCost.bind("valuesChanging", function(e, data){
-        minCost.val( data.values.min );
-        maxCost.val( data.values.max );
-    });
-
-    minCost.val( filterCost.rangeSlider('min') );
-    maxCost.val( filterCost.rangeSlider('max') );
-
-    minCost.change(function() {
-        filterCost.rangeSlider("min", $(this).val());
-    });
-
-    maxCost.change(function() {
-        filterCost.rangeSlider("max", $(this).val());
     });
 
 });
