@@ -4,6 +4,9 @@ $(window).ready(function() {
     setTimeout(function() {
         $('aside').addClass('unactive');
         $('.preloader').fadeOut(500);
+        setTimeout(function() {
+            $('.modal-init').fadeIn().css('display', 'flex');
+        }, 500);
     }, 500);
 
     $(document).click(function(event) {

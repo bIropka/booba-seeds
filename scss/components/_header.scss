@@ -189,6 +189,14 @@ header {
 
     }
 
+    &:last-of-type {
+
+      input {
+        border-radius: 0;
+      }
+
+    }
+
     input {
       border-right: none;
       border-left: 1px solid #fff;
