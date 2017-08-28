@@ -27,3 +27,12 @@ minCost.change(function() {
 maxCost.change(function() {
     filterCost.rangeSlider("max", $(this).val());
 });
+
+$('.aside-burger').click(function() {
+    $(this).parents('aside').toggleClass('active');
+    filterCost.rangeSlider('resize');
+});
+
+$(window).resize(function() {
+    filterCost.rangeSlider('resize');
+});

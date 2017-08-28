@@ -2,7 +2,6 @@ $(window).ready(function() {
 
 
     setTimeout(function() {
-        $('aside').addClass('unactive');
         $('.preloader').fadeOut(500);
         setTimeout(function() {
             $('.modal-init').fadeIn().css('display', 'flex');
@@ -18,6 +17,7 @@ $(window).ready(function() {
     });
 
     if($(window).width() < 641) {
+        $('.form-search').appendTo('header nav');
         $('.product-item-forum').insertAfter('.product-item-rate');
         $('.product-item-header').insertAfter('.product-item-cost');
         $('.page-main .catalog-list').css('display', 'none');
@@ -35,6 +35,7 @@ $(window).ready(function() {
     $(window).resize(function() {
 
         if($(window).width() < 641) {
+            $('.form-search').appendTo('header nav');
             $('.product-item-forum').insertAfter('.product-item-rate');
             $('.product-item-header').insertAfter('.product-item-cost');
             $('.page-main .catalog-list').css('display', 'none');
@@ -109,10 +110,6 @@ $(window).ready(function() {
     $('.catalog-burger').click(function() {
         $(this).parents('.catalog').toggleClass('active');
         $(this).siblings('.catalog-list').slideToggle();
-    });
-
-    $('.aside-burger').click(function() {
-        $(this).parents('aside').toggleClass('unactive');
     });
 
     $('.products-main-prev').click(function() {

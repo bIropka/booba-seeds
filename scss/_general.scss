@@ -688,28 +688,7 @@ input[type="radio"]:checked + label:after {
     order: 1;
     padding: 0 20px;
 
-    .aside-list,
     .form-filter {
-      display: block;
-      margin: 30px 0;
-
-      br {
-        display: none;
-      }
-
-    }
-
-    &.unactive {
-
-      .aside-list,
-      .form-filter {
-        display: none;
-      }
-
-    }
-
-    .form-filter {
-      display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
       align-items: flex-start;
@@ -734,6 +713,17 @@ input[type="radio"]:checked + label:after {
           width: 100%;
         }
 
+      }
+
+    }
+
+    .aside-list,
+    .form-filter {
+      display: none;
+      margin: 30px 0;
+
+      br {
+        display: none;
       }
 
     }
@@ -769,12 +759,24 @@ input[type="radio"]:checked + label:after {
     display: none;
   }
 
-  aside.active .aside-burger-visible {
-    display: block;
-  }
+  aside.active {
 
-  aside.active .aside-burger-hidden {
-    display: none;
+    .aside-burger-visible {
+      display: block;
+    }
+
+    .aside-burger-hidden {
+      display: none;
+    }
+
+    .aside-list {
+      display: block;
+    }
+
+    .form-filter {
+      display: flex;
+    }
+
   }
 
   .aside-title {
